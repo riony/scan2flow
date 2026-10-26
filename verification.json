@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-26",
+  "python": "3.14.4",
+  "environment": "Fresh isolated temporary venv; dependencies installed by pip; no borrowed site-packages",
+  "installation": "pip install -e .[dev] completed after licence and metadata update",
+  "versions": {
+    "numpy": "2.5.4",
+    "trimesh": "5.2.0",
+    "pytest": "9.1.1",
+    "ruff": "0.17.2",
+    "scan2foam": "0.1.0"
+  },
+  "checks": {
+    "pip_check": "passed",
+    "pytest": {
+      "passed": 5,
+      "failed": 0
+    },
+    "ruff_check": "passed",
+    "template_shell_syntax": "3 passed",
+    "python_source_compilation": "all source and prototype Python files passed",
+    "fixture_hashes": "2 matched",
+    "source_copy_hashes": 36,
+    "source_files_unchanged": 36,
+    "inspect_console_command": "passed; open shell correctly reported open",
+    "archive_preservation": {
+      "checked": 1434,
+      "unchanged": 1434
+    },
+    "raw_media_or_hpc_files": 0
+  },
+  "keyword_audit": {
+    "literal_zero_hit_gate_passed": false,
+    "raw_matches": 5,
+    "unexpected_matches": 0,
+    "exceptions": [
+      {
+        "file": ".gitignore",
+        "lines": [
+          27,
+          28
+        ],
+        "reason": "Rules excluding upstream model artefacts; keep these protective exclusions"
+      },
+      {
+        "file": "prototypes/symmetry_closure.py",
+        "lines": [
+          294
+        ],
+        "reason": "Ordinary SciPy smoothing, not upstream inference"
+      },
+      {
+        "file": "prototypes/tiered_assembly.py",
+        "lines": [
+          42,
+          387
+        ],
+        "reason": "Ordinary SciPy smoothing import and call, not upstream inference"
+      }
+    ],
+    "note": "Literal grep is not empty. Exceptions are disclosed rather than obfuscated or removed; a strict zero-hit publication policy still needs this distinction resolved."
+  },
+  "size_check": {
+    "content_files_before_this_report": 61,
+    "content_bytes_before_this_report": 1389494,
+    "maximum_file_bytes": 738649,
+    "limit_bytes": 30000000,
+    "passed": true
+  },
+  "not_tested": [
+    "Optional CAD binding/runtime compatibility",
+    "Optional solver execution",
+    "End-to-end prototype recipes",
+    "Physical or aerodynamic fidelity"
+  ],
+  "publication": {
+    "remote_configured": false,
+    "pushed": false,
+    "interest_form": "User handles; no agent submission"
+  },
+  "licence": "MIT; copyright 2026 riony; employment-IP clearance confirmed by owner"
+}

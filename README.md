@@ -20,9 +20,9 @@ The command emits JSON with face/vertex counts, bounds, edge incidence, boundary
 
 ## Inputs and provenance
 
-The fixtures are geometry-only derivatives of stationary-vehicle surface reconstruction. The upstream sources used video photogrammetry and learned multi-view depth; one fixture also underwent smooth CAD fitting and sewing. Upstream reconstruction software, weights, video, photographs and inspection images are outside this repository's scope. They are not required to run the deterministic toolkit. See `fixtures/README.md` for transformations and limitations.
+The fixtures are geometry-only derivatives of stationary-vehicle surface reconstruction. The upstream sources used video photogrammetry and learned multi-view depth; one fixture also underwent smooth CAD fitting and sewing. Upstream reconstruction software, weights, video, photographs and inspection images are outside this repository's scope. They are not required to run the deterministic toolkit. See `fixtures/README.md` for transformations and limitations. The project was developed on personal equipment using personal footage.
 
-No footage, textures or bystander imagery is included. The numeric geometry remains unscaled and must not be assumed to be metres or millimetres. Fixture suitability as a test input does not establish permission for external redistribution.
+No footage, textures or bystander imagery is included. The numeric geometry remains unscaled and must not be assumed to be metres or millimetres.
 
 ## Layout and current limits
 
@@ -34,6 +34,8 @@ No footage, textures or bystander imagery is included. The numeric geometry rema
 
 This is a separate repository built from copies. Its setup does not move or rewrite the source evidence archive. Prototype functions are not automatically executed by the CLI. No solver is launched during installation or tests.
 
-## Release status
+## Licence and verification
 
-Local scaffold only: no remote, upload, recording or publication has been configured. No distribution licence has been selected. Review ownership, employment IP obligations, fixture redistribution rights and any recording/transcript agreement before assigning a licence or sharing it. No claim is made about any platform's eligibility rules, pay rate or contract terms.
+The code and included geometry fixtures are provided under the [MIT licence](LICENSE), copyright 2026 riony. Dependencies retain their own licences. The owner has confirmed employment-IP clearance.
+
+See `verification.json` for the local installation, tests, lint and repository audit. These checks certify the inspection package and source hygiene, not the optional solver/CAD recipes or physical geometry. Publication and recorded sessions are separate actions; no platform eligibility, pay rate or contract terms are asserted here.

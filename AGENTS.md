@@ -6,4 +6,4 @@ Capture videos, photographs, frame crops, mask overlays, credentials, reconstruc
 
 The production implementation currently covers inspection only. Keep prototype migration bounded and explicit; do not silently turn a permissive prototype parser into an acceptance gate. Distinguish topology checks from physical fidelity, and units from assumed metric scale.
 
-Local setup does not authorize publication, uploading or recorded external sessions. Licence and sharing status are in LICENSE_STATUS.md. Do not grant rights or assert contractual terms that have not been established.
+The code and included fixtures are MIT-licensed; the owner confirmed employment-IP clearance. Local development does not by itself authorize uploading or recorded external sessions. Follow the user's explicit publication instructions and leave contractor applications and identity verification to the user.

@@ -1,10 +1,13 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "scan2foam"
 version = "0.1.0"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "riony"}]
 description = "Surface-mesh inspection and an experimental geometry-to-OpenFOAM toolkit"
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.24", "trimesh>=4"]
