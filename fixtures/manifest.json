@@ -1,0 +1,22 @@
+{
+  "units": "unscaled input units; no metric scale applied",
+  "provenance": "Video photogrammetry and learned multi-view depth of a stationary vehicle; shell additionally fitted in CAD and sewn",
+  "files": [
+    {
+      "name": "open_shell.ply",
+      "output_faces": 21361,
+      "method": "VTK topology-preserving decimation requested94%, boundary vertices retained; translated to bounding-box centre; no scaling or closure",
+      "sha256": "2cabb95f358ac8793f4a42d4ea109b865115b3901f89d6d276881656919bed3b",
+      "bytes": 424708
+    },
+    {
+      "name": "rough_patch.ply",
+      "output_faces": 37846,
+      "method": "Local PCA Delaunay of fused reference points; triangles over4x median nearest-neighbour spacing omitted, no surface smoothing/filling; translated only",
+      "sha256": "9660584d67cb0f7c4981f7f4c31301e6671fdb3f9a293b75aa76410809926758",
+      "bytes": 738649
+    }
+  ],
+  "no_images_or_textures": true,
+  "redistribution_clearance": "not verified"
+}
