@@ -1,0 +1,37 @@
+.env
+.env.*
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# Capture media and derived images do not belong in this repository.
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+# Local solver output
+processor*/
+postProcessing/
+dynamicCode/
+constant/polyMesh/
+log.*
+*.foam
+*.OpenFOAM
+runs/

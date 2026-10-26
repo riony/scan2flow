@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scan2foam"
+version = "0.1.0"
+description = "Surface-mesh inspection and an experimental geometry-to-OpenFOAM toolkit"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24", "trimesh>=4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+prototypes = ["scipy>=1.11"]
+
+[project.scripts]
+scan2foam = "scan2foam.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
