@@ -13,6 +13,7 @@ python -m pip install -e '.[dev]'
 scan2foam inspect fixtures/open_shell.ply
 scan2foam inspect fixtures/rough_patch.ply
 pytest -q
+ruff check .
 ```
 
 The command emits JSON with face/vertex counts, bounds, edge incidence, boundary loops/chains/branches, Euler number and watertightness. It does not alter the input or infer units. Coincident coordinates are merged to 12 decimal places for topology analysis; no self-intersection or vertex-manifold certificate is implied. A watertight flag is not aerodynamic or CFD validation.
@@ -26,7 +27,7 @@ No footage, textures or bystander imagery is included. The numeric geometry rema
 ## Layout and current limits
 
 - `src/scan2foam/`: inspection CLI and empty geometry/OpenFOAM namespaces.
-- `prototypes/`: copied exploratory helper functions; migration and validation remain unfinished.
+- `prototypes/`: complete deterministic pipeline prototypes and research recipes; migration and validation remain unfinished.
 - `fixtures/`: one decimated open shell and one noisy support patch.
 - `tests/`: CLI/read-only and basic topology checks.
 - `ROADMAP.md`: bounded engineering milestones, including provenance and acceptance gates.

@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
-import numpy as np
+
 import trimesh
-from scan2foam.cli import main, inspect_mesh
+
+from scan2foam.cli import inspect_mesh, main
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures"
 
@@ -27,12 +28,15 @@ def test_topology_and_missing_input(tmp_path, capsys):
     assert result["watertight"] and result["boundary_edges"] == 0
     assert result["euler_number"] == 2 and result["boundary_loops"] == 0
     # Three faces share one edge: boundary components must not be called loops.
-    fan = trimesh.Trimesh(vertices=[[0,0,0],[1,0,0],[0,1,0],[0,-1,0],[0,0,1]],
-                          faces=[[0,1,2],[1,0,3],[0,1,4]], process=False)
-    fan.export(path.with_suffix('.ply'))
-    result = inspect_mesh(path.with_suffix('.ply'))
-    assert result['nonmanifold_edges'] == 1
-    assert result['boundary_branched_components'] == 1
-    assert result['boundary_loops'] == 0
-    assert main(['inspect', str(tmp_path / 'missing.ply')]) == 2
-    assert 'scan2foam:' in capsys.readouterr().err
+    fan = trimesh.Trimesh(
+        vertices=[[0, 0, 0], [1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1]],
+        faces=[[0, 1, 2], [1, 0, 3], [0, 1, 4]],
+        process=False,
+    )
+    fan.export(path.with_suffix(".ply"))
+    result = inspect_mesh(path.with_suffix(".ply"))
+    assert result["nonmanifold_edges"] == 1
+    assert result["boundary_branched_components"] == 1
+    assert result["boundary_loops"] == 0
+    assert main(["inspect", str(tmp_path / "missing.ply")]) == 2
+    assert "scan2foam:" in capsys.readouterr().err

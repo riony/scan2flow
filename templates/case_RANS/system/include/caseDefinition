@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam — central case parameters.  Included by controlDict, properties,     |
+| and 0.orig fields.  The pipeline (pipeline/mesh.py, solve.py) regenerates    |
+| this file per-vehicle from the case config; the values below are defaults    |
+| for a generic ~4.6 m car, half-body, moving ground.                          |
+\*---------------------------------------------------------------------------*/
+
+// ===== Freestream / reference conditions =====
+Uinf            40;             // freestream speed magnitude [m/s]
+UinfVec         (40 0 0);       // freestream velocity vector (keep consistent with Uinf)
+nu              1.5e-05;        // kinematic viscosity [m^2/s]
+rhoInf          1.225;          // density [kg/m^3] (for forceCoeffs)
+pref            0;              // reference (gauge) kinematic pressure [m^2/s^2]
+
+// ===== Inlet turbulence (k-omega SST) =====
+// k     = 1.5*(I*Uinf)^2 ;  omega = sqrt(k)/(Cmu^0.25 * L)
+// defaults: I = 0.5%, L = 0.1 m  ->  recomputed by the generator
+kInlet          0.06;
+omegaInlet      4.5;
+nutInlet        0.0133;
+
+// ===== Turbulence model =====
+RASturbModel    kOmegaSST;
+
+// ===== Reference geometry for forceCoeffs =====
+// NOTE half-body symmetry: set Aref = (full frontal area)/2 so reported Cd/Cl
+// equal the full-vehicle coefficients. Full-body runs use the full frontal area.
+Aref            1.0;            // [m^2]  (half of full frontal area for half-body)
+lRef            4.6;            // reference length (vehicle length) [m]
+CofR            (2.0 0 0.4);    // centre of rotation for moments [m]
+
+// ===== Ground / wheels =====
+groundType      moving;         // moving | slip
+
+// ===== Parallel decomposition =====
+nCores          96;
+
+// ===== Wall patch group (regex) — matches single 'car' or split patches =====
+carPatches      "(car|body|wheels|mirrors|underbody|glass|.*body.*|.*wheel.*)";
+
+// ************************************************************************* //

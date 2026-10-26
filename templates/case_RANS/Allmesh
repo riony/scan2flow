@@ -1,0 +1,13 @@
+#!/bin/bash
+# scan2foam RANS template — mesh generation (parallel snappyHexMesh).
+cd "${0%/*}" || exit 1
+. "${WM_PROJECT_DIR:?}/bin/tools/RunFunctions"
+
+runApplication blockMesh
+runApplication surfaceFeatureExtract
+runApplication decomposePar -copyZero
+runParallel snappyHexMesh -overwrite
+runParallel checkMesh -allTopology -allGeometry \
+    -writeFields '(nonOrthoAngle skewness)' -latestTime
+
+echo "Mesh built. Inspect log.checkMesh for quality gates (nonOrtho<65, skewness<4)."

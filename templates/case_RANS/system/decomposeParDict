@@ -1,0 +1,19 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam template — parallel decomposition (scotch, nCores from caseDefinition)|
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      decomposeParDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include        "include/caseDefinition"
+
+numberOfSubdomains  $nCores;
+
+method          scotch;     // KaHIP on HPC — see hpc/decomposeParDict.hpc
+
+// ************************************************************************* //

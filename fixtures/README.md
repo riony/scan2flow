@@ -12,3 +12,7 @@ Both were translated independently to their bounding-box centres, with no scalin
 The input surfaces came from video photogrammetry and learned multi-view depth of a stationary vehicle. The shell also underwent smooth CAD fitting and sewing. All upstream inference, images and videos remain outside this repository. Source geometry was copied, never moved or changed. The disowned whole-car prototype is not used.
 
 `manifest.json` records geometry-only hashes and transformation descriptions. The original detailed provenance stays with the private evidence archive. Redistribution rights have not been verified.
+
+## Solver diagnostic samples
+
+`checkMesh_sample.log` records a failed mesh check (excessive skewness); `surfaceCheck_sample.log` records an open shell. They are stripped historical logs, not fresh solver results and not checks of these decimated fixtures. Numeric content is retained solely for parser tests; the surface log's historical scale is not an accepted measurement. See `prototypes/README.md` for parser limitations.

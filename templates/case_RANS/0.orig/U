@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam RANS template — velocity. Moving ground (groundType moving).         |
+| For groundType slip, the generator swaps the 'ground' entry to type slip.   |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include        "${FOAM_CASE}/system/include/caseDefinition"
+
+dimensions      [0 1 -1 0 0 0 0];
+internalField   uniform $UinfVec;
+
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"   // auto-types symmetry/empty/etc.
+
+    inlet
+    {
+        type            fixedValue;
+        value           uniform $UinfVec;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform (0 0 0);
+        value           uniform $UinfVec;
+    }
+    "(top|sides)"
+    {
+        type            slip;
+    }
+    ground
+    {
+        type            fixedValue;     // moving road, matches freestream
+        value           uniform $UinfVec;
+    }
+    $carPatches
+    {
+        type            noSlip;
+    }
+}
+
+// ************************************************************************* //

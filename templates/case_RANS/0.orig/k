@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam RANS template — turbulent kinetic energy (k-omega SST).              |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      k;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include        "${FOAM_CASE}/system/include/caseDefinition"
+
+dimensions      [0 2 -2 0 0 0 0];
+internalField   uniform $kInlet;
+
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+
+    inlet
+    {
+        type            fixedValue;
+        value           uniform $kInlet;
+    }
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      uniform $kInlet;
+        value           uniform $kInlet;
+    }
+    "(top|sides)"
+    {
+        type            slip;
+    }
+    ground
+    {
+        type            kqRWallFunction;
+        value           uniform $kInlet;
+    }
+    $carPatches
+    {
+        type            kqRWallFunction;
+        value           uniform $kInlet;
+    }
+}
+
+// ************************************************************************* //

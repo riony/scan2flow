@@ -18,6 +18,7 @@ boundary ( domain {{ type patch; faces ((0 3 2 1)(4 5 6 7)(0 1 5 4)(2 3 7 6)(0 4
 mergePatchPairs ();
 """
 
+
 def _snappy_wrap_dict(level, seed, feature_snap) -> str:
     fs = "true" if feature_snap else "false"
     feat = '{ file "car.eMesh"; level %d; }' % level if feature_snap else ""
@@ -52,11 +53,13 @@ meshQualityControls
 mergeTolerance 1e-6;
 """
 
+
 def _sfe_dict() -> str:
     return """FoamFile { version 2.0; format ascii; class dictionary; object surfaceFeatureExtractDict; }
 car.stl { extractionMethod extractFromSurface;
   extractFromSurfaceCoeffs { includedAngle 150; } writeObj no; }
 """
+
 
 def _decompose_dict(n) -> str:
     return f"""FoamFile {{ version 2.0; format ascii; class dictionary; object decomposeParDict; }}

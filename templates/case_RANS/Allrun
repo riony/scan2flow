@@ -1,0 +1,24 @@
+#!/bin/bash
+# scan2foam RANS template — full run: mesh, initialise, solve, reconstruct.
+cd "${0%/*}" || exit 1
+. "${WM_PROJECT_DIR:?}/bin/tools/RunFunctions"
+
+# 1. mesh (skip if already decomposed + meshed)
+if [ ! -d processor0/constant/polyMesh ]; then
+    ./Allmesh
+fi
+
+# 2. fresh 0/ into every processor (snappy overwrote the mesh)
+runParallel -s restore0 restore0Dir -processor 2>/dev/null || \
+    ( restore0Dir ; ls -d processor* >/dev/null 2>&1 && \
+      for p in processor*; do cp -r 0 "$p/0"; done )
+
+# 3. better initial field, then steady solve
+runParallel renumberMesh -overwrite
+runParallel potentialFoam -initialiseUBCs -writePhi
+runParallel "$(getApplication)"
+
+# 4. reconstruct final field for post/viz
+runApplication reconstructPar -latestTime
+touch "${PWD##*/}.foam"
+echo "RANS run complete. Forces: postProcessing/forceCoeffs1/"

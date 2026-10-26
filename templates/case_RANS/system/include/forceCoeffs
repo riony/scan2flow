@@ -1,0 +1,49 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam — force & moment coefficients on the vehicle surface.                 |
+| Included by controlDict. Reference values come from caseDefinition.          |
+| For half-body symmetry, Aref is the HALF frontal area (see caseDefinition).  |
+\*---------------------------------------------------------------------------*/
+
+forceCoeffs1
+{
+    type            forceCoeffs;
+    libs            (forces);
+
+    writeControl    timeStep;
+    writeInterval   1;
+    log             yes;
+
+    patches         ( $carPatches );
+
+    // incompressible: constant reference density
+    rho             rhoInf;
+    rhoInf          $rhoInf;
+
+    liftDir         (0 0 1);
+    dragDir         (1 0 0);
+    pitchAxis       (0 1 0);
+
+    magUInf         $Uinf;
+    lRef            $lRef;
+    Aref            $Aref;
+    CofR            $CofR;
+
+    // front/rear lift split (CofR-referenced)
+    porosity        no;
+}
+
+// Per-component force breakdown (pressure vs viscous) — handy for the
+// "drag accounting" charts. Reports raw forces; coefficients derived in post.
+forcesVehicle
+{
+    type            forces;
+    libs            (forces);
+    writeControl    timeStep;
+    writeInterval   10;
+    patches         ( $carPatches );
+    rho             rhoInf;
+    rhoInf          $rhoInf;
+    CofR            $CofR;
+}
+
+// ************************************************************************* //

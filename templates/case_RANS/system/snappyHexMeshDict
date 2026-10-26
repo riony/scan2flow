@@ -1,0 +1,128 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam template — snappyHexMesh. Castellate + snap + 6 prism layers.        |
+| Single 'car' surface by default; the generator adds per-patch regions       |
+| (body/glass/wheels/...) and nested refinement boxes. Targets y+ 30-300      |
+| with wall functions. Sizes scale up for production via the generator.       |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+geometry
+{
+    car.stl
+    {
+        type triSurfaceMesh;
+        name car;
+    }
+
+    // near-body refinement box
+    refineNear
+    {
+        type    box;
+        min     (-2  0 0);
+        max     ( 8  4 4);
+    }
+    // wake refinement box
+    refineWake
+    {
+        type    box;
+        min     ( 4  0 0);
+        max     (20  3 3);
+    }
+}
+
+castellatedMeshControls
+{
+    maxLocalCells       4000000;
+    maxGlobalCells      60000000;
+    minRefinementCells  10;
+    maxLoadUnbalance    0.10;
+    nCellsBetweenLevels 3;
+
+    features
+    (
+        { file "car.eMesh"; level 6; }
+    );
+
+    refinementSurfaces
+    {
+        car
+        {
+            level (5 6);
+            patchInfo { type wall; }
+        }
+    }
+
+    resolveFeatureAngle     30;
+    refinementRegions
+    {
+        refineNear { mode inside; levels ((1e15 3)); }
+        refineWake { mode inside; levels ((1e15 2)); }
+    }
+
+    locationInMesh      (-10 5 7);   // a point in the fluid, outside the car
+    allowFreeStandingZoneFaces true;
+}
+
+snapControls
+{
+    nSmoothPatch        3;
+    tolerance           2.0;
+    nSolveIter          50;
+    nRelaxIter          5;
+    nFeatureSnapIter    10;
+    implicitFeatureSnap false;
+    explicitFeatureSnap true;
+    multiRegionFeatureSnap false;
+}
+
+addLayersControls
+{
+    relativeSizes       true;
+    layers
+    {
+        "(car|body|wheels|mirrors|underbody|glass).*"
+        {
+            nSurfaceLayers 6;
+        }
+    }
+    expansionRatio      1.2;
+    finalLayerThickness 0.4;
+    minThickness        0.1;
+    nGrow               0;
+
+    featureAngle        130;
+    slipFeatureAngle    30;
+    nRelaxIter          5;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals      3;
+    nSmoothThickness    10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle  90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter          50;
+    nRelaxedIter        20;
+}
+
+meshQualityControls
+{
+    #include "meshQualityDict"
+    nSmoothScale        4;
+    errorReduction      0.75;
+}
+
+writeFlags ( scalarLevels layerSets layerFields );
+mergeTolerance 1e-6;
+
+// ************************************************************************* //

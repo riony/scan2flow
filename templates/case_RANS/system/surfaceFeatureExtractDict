@@ -1,0 +1,24 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam template — extract feature edges from the vehicle surface for snappy. |
+| The generator lists every per-patch STL placed in constant/triSurface/.      |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeatureExtractDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+car.stl
+{
+    extractionMethod    extractFromSurface;
+    extractFromSurfaceCoeffs
+    {
+        includedAngle   150;        // sharper than this counts as a feature edge
+    }
+    writeObj            no;
+}
+
+// ************************************************************************* //

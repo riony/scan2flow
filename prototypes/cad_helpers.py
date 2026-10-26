@@ -1,13 +1,15 @@
 """v0.1 spline/STEP helpers. Requires a compatible OpenCASCADE Python runtime; no full sewing pipeline, tolerance policy or unit guarantee yet."""
+
 import numpy as np
-from scipy.interpolate import make_interp_spline
-from OCP.collections import Array1_double, Array1_int, Array1_gp_Pnt2d
-from OCP.gp import gp_Pnt2d
-from OCP.Geom2d import Geom2d_BSplineCurve
 from OCP.BRepBuilderAPI import BRepBuilderAPI_MakeEdge
 from OCP.BRepCheck import BRepCheck_Analyzer
-from OCP.STEPControl import STEPControl_Reader, STEPControl_Writer, STEPControl_AsIs
+from OCP.collections import Array1_double, Array1_gp_Pnt2d, Array1_int
+from OCP.Geom2d import Geom2d_BSplineCurve
+from OCP.gp import gp_Pnt2d
 from OCP.IFSelect import IFSelect_RetDone
+from OCP.STEPControl import STEPControl_AsIs, STEPControl_Reader, STEPControl_Writer
+from scipy.interpolate import make_interp_spline
+
 
 def knots_ocp(vals):
     k, m = np.unique(vals, return_counts=True)
@@ -17,6 +19,7 @@ def knots_ocp(vals):
         a.SetValue(i + 1, float(x))
         b.SetValue(i + 1, int(y))
     return a, b
+
 
 def make_2d_bspline_edge(uv_pts, surf, deg=3):
     uv_pts = np.asarray(uv_pts, dtype=float)
@@ -33,11 +36,13 @@ def make_2d_bspline_edge(uv_pts, surf, deg=3):
     c2d = Geom2d_BSplineCurve(arr, uk, um, k)
     return BRepBuilderAPI_MakeEdge(c2d, surf, 0.0, 1.0).Edge()
 
+
 def read_step_shape(path):
     r = STEPControl_Reader()
     assert r.ReadFile(str(path)) == IFSelect_RetDone, f"Failed to read {path}"
     r.TransferRoots()
     return r.OneShape()
+
 
 def write_step_checked(shape, path):
     assert BRepCheck_Analyzer(shape).IsValid(), f"Invalid shape before STEP write: {path}"

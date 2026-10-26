@@ -1,0 +1,185 @@
+{
+  "scope": "Copies of deterministic source; no original capture assets or inferred whole-body geometry included.",
+  "files": [
+    {
+      "copy": "prototypes/pipeline/config.py",
+      "source_sha256": "08bc9bdb7947f226893b585d97912bf0e66a3cbb8206413baae02a869e904f01",
+      "copied_sha256": "09b4091ce22c9b18e0fff449ae7e3cc8dee65f944f6dab6f9435c5f451311de0"
+    },
+    {
+      "copy": "prototypes/pipeline/casegen.py",
+      "source_sha256": "7bb15b705a27b49a0b7477b34a987a39d7a7be0b0385f3c2c5f3426c40b0a82d",
+      "copied_sha256": "f9ac9252edbf7c4eefeabecc39c14090bfbb50f36fbef2ec82cfb936c9d902b8"
+    },
+    {
+      "copy": "prototypes/pipeline/mesh.py",
+      "source_sha256": "7b7e5099d66ddf324f57c8e20fc927677f05642f464a4acdc86c6485f71b2f09",
+      "copied_sha256": "123ba3c885bf0ae40f44546ec05bfcce4630433a70a95ab76e2045fcfac2388d"
+    },
+    {
+      "copy": "prototypes/pipeline/foam.py",
+      "source_sha256": "9bec68902b42fe64c9a26e2a8e1baed932208839f463908ab9cc350dd22cc473",
+      "copied_sha256": "24777e656d8e2797233828ba4a7fe7cf9ae2e3079d2cb8340d4a08560774b948"
+    },
+    {
+      "copy": "prototypes/pipeline/ingest.py",
+      "source_sha256": "263a91af6b3aef4a86ec5adf245f117a1af340e935e848b03e137ab51e16e8bb",
+      "copied_sha256": "50c6bf73bbb76777d456c28242fb702496a0dac9c59a7620cceb9971a55c0df7"
+    },
+    {
+      "copy": "prototypes/pipeline/meshrepair.py",
+      "source_sha256": "2b3d54645b2a27d3516bc68aafc933397dcb967946beecc666de8ab737d9e16f",
+      "copied_sha256": "9414e4d02cebc99858ace9d5d23f121c629acad5cc972e6d52c35126addb11e8"
+    },
+    {
+      "copy": "prototypes/repair_prototype.py",
+      "source_sha256": "bdcca1125b03742911cd7166fbbf0294f6ae56e07a7c57d193c5a9fbbd60cd98",
+      "copied_sha256": "55df03c5283d2c18346644c189eebce31eb32a2d3792e83c88872df6465f3b47"
+    },
+    {
+      "copy": "prototypes/update_region_state.py",
+      "source_sha256": "fa65063d858851d28d495772cfa2b3b8a078029f13d27b69476698ed60fc6bf3",
+      "copied_sha256": "c12ae756b24049e8398d937b6576f3602be84abc797be2c62327d1d87525cf6d"
+    },
+    {
+      "copy": "prototypes/symmetry_frame.py",
+      "source_sha256": "a5702ea80379a1248009402115aa8d41883da1a2e36bcc6b5cc9cc52806b1b28",
+      "copied_sha256": "bfd8f5ef0dddd237a7950ec12d18cb19ebad8e92deee8721f6cd37c930dce216"
+    },
+    {
+      "copy": "prototypes/symmetry_closure.py",
+      "source_sha256": "eeedecd52cb6ef70645ca81d84f27c66b702bf170ab3f6a83521ff048bd55df0",
+      "copied_sha256": "d894c48d458956b4249cf21ac904d81b13afbc5e41728868206f1ac4eb6dc63e"
+    },
+    {
+      "copy": "prototypes/tiered_assembly.py",
+      "source_sha256": "3c155f45eb8910bd8b7a2a218b1c45e1e56191a455c9b7782f0ba638943f8ef4",
+      "copied_sha256": "1c5e3f023486d2235f4636215c81b7ff9a4c5999b0d2add8095e06eaed02881c"
+    },
+    {
+      "copy": "prototypes/sew_shell.py",
+      "source_sha256": "5d5a927a39af6825893fdff5d09ede7fe383f3d994034b39e59bd688f5cb4722",
+      "copied_sha256": "2b3857daab6d511d3a18717b32b250cdbe1a6e5303bba2d37b202f9044e85b27"
+    },
+    {
+      "copy": "prototypes/curve_fit.py",
+      "source_sha256": "a4278c7d192ea1ff06fbaecadad6cdc1b9bf828a06283dc7afad51a950128057",
+      "copied_sha256": "7dda2d2dc9e906351ad1a2e4c1974cb4450a371023396428780e14c6c6bd9a47"
+    },
+    {
+      "copy": "templates/case_RANS/Allmesh",
+      "source_sha256": "667340ce2fec2104a48701c6ea8b1401a27330316919660f648d626a06880813",
+      "copied_sha256": "9db941b6f710e23543ebc321eb2df2b6e2c17513ad2d89f680780f36f6952f08"
+    },
+    {
+      "copy": "templates/case_RANS/Allclean",
+      "source_sha256": "f9ed8c1be9331e57033e4b997e86f2d1d0aa2bb3f4e207851fbaa4d7435b88c5",
+      "copied_sha256": "af8de5ffc45a0b0c58fcd41bdc6a77377a3aa5c17013e784f97811c75cf2da5f"
+    },
+    {
+      "copy": "templates/case_RANS/Allrun",
+      "source_sha256": "026e9594c99b3680c7176fbb6918bee6c5218fcb124fa9586855e13412dbb722",
+      "copied_sha256": "9d5b900db164bf4924c25abb6bacc853a603de04631e3a26cb4aadfbf77f9815"
+    },
+    {
+      "copy": "templates/case_RANS/0.orig/nut",
+      "source_sha256": "4727b59f6fdce7e448ff6000a0e61b8e2e79e417e33941057fe714c74cb75e8c",
+      "copied_sha256": "06c51e40cc89411c7b14e9e54a7b6c34b136c0ccc1187df97408d303357b346c"
+    },
+    {
+      "copy": "templates/case_RANS/0.orig/omega",
+      "source_sha256": "2c1f78ed4fdf2b5830dcc5a041d1e43fab98c347851b117c3e66f23721df03f4",
+      "copied_sha256": "42df192046074d87c5706a2f39866586f90bd78f2e1ecff70ecc9b28db085dfb"
+    },
+    {
+      "copy": "templates/case_RANS/0.orig/k",
+      "source_sha256": "c133cc9a29d50145e939c7cdfc7ee82da26d7e954dc0803036d1fdc6c27cadb7",
+      "copied_sha256": "a70f46324dd9a0064febd57e2cea3af72c0767e006b67e8c13ed761482929124"
+    },
+    {
+      "copy": "templates/case_RANS/0.orig/U",
+      "source_sha256": "00eedba86aad29ac93bf2f8df6c8d4b4ad255499c9e1096b6e2b49d9a251140d",
+      "copied_sha256": "9cc905ea1e003d2986ff48172129317295462718b8df1951ab8633575be7e2cb"
+    },
+    {
+      "copy": "templates/case_RANS/0.orig/p",
+      "source_sha256": "de794c01886daef15dd575d8e7ae87c869bf18ee8e78d640f0e44a20a1fd72aa",
+      "copied_sha256": "f2e55f72018464bdd2d6d71de7966d1a5f9a1b4c1009de0c5e3d9ec73f241bdc"
+    },
+    {
+      "copy": "templates/case_RANS/system/controlDict",
+      "source_sha256": "4bcb2f5b0c2695696542b009e8d7b98b0e2af66b9f5ab48ae0daf9a8d2e2f2ba",
+      "copied_sha256": "12d2ff39b4dbe7f261b02408336b0a36da249c80925e3f6e1fea2bd6f7bd485e"
+    },
+    {
+      "copy": "templates/case_RANS/system/fvSolution",
+      "source_sha256": "abf45f1a76449400a92505e59d40fde552a556ec449614ae820bc55f79d5c48e",
+      "copied_sha256": "8a6405534298a843d77a26d1384a14ed4821255774304c52e554ada1fbabbe02"
+    },
+    {
+      "copy": "templates/case_RANS/system/meshQualityDict",
+      "source_sha256": "21ab2087edc54eee022a07ed69cbbfa7ee8b1cc06716909d7a37fede88ddd677",
+      "copied_sha256": "d7df4d18d24d55bd15165ed9816fb53298d6683f61d99eb60fe5d71433ee3d3e"
+    },
+    {
+      "copy": "templates/case_RANS/system/fvSchemes",
+      "source_sha256": "9b59a08fcfe58af78c35320260b1cc1f18a7101503cd55c0fa531dbb4ddba1ee",
+      "copied_sha256": "837d52dae1a98709838d732c5c04924b26569e039200b2a13485291eee7bab98"
+    },
+    {
+      "copy": "templates/case_RANS/system/snappyHexMeshDict",
+      "source_sha256": "db2f6af71da2772f5b54483c709bfc76b6fd3eb21be1099da54b190dd7da7d66",
+      "copied_sha256": "5b32ec9a3c5f847b4c984fdc5b61799c0f008cc9f00362d259dca150849253de"
+    },
+    {
+      "copy": "templates/case_RANS/system/surfaceFeatureExtractDict",
+      "source_sha256": "1f82f6183a69e8a4b704f01d35c7dadebf9cf16cee62c5bbc1050049720cd236",
+      "copied_sha256": "f65ee7bb07bf6b29dc4f81d8fd590ecc02b3e58cad328a6f107307239e0adf08"
+    },
+    {
+      "copy": "templates/case_RANS/system/blockMeshDict",
+      "source_sha256": "6cc1ae452a66208704dcc3bbeec4d2e9d4106efd7c5935ad4c65802c71a89372",
+      "copied_sha256": "59bfdf9ff9642bb7359a963d2a0cc692f3a3da5b76fc389258ace1c145b54990"
+    },
+    {
+      "copy": "templates/case_RANS/system/decomposeParDict",
+      "source_sha256": "f327e7f750d9c5ae9ce9b607baa56af620fabbb8c6f4cc96b426da231441c9fd",
+      "copied_sha256": "dc139ef86f1894f8f8f276c79dff41bf235b2faf32181fb54b10a00ae20a9f8a"
+    },
+    {
+      "copy": "templates/case_RANS/constant/turbulenceProperties",
+      "source_sha256": "39d733e43edda6ae4d8c5df524b36f58d16fd3eb2d7262fac59caf0b7bee2082",
+      "copied_sha256": "6e2d50023a2aa8f2970beacdb247838b8773fb158d5939d6c3186dcf4061fc7f"
+    },
+    {
+      "copy": "templates/case_RANS/constant/transportProperties",
+      "source_sha256": "a1f1edc1b2d3678cff1dc805edf7525c00544414375048664466cbc365b57661",
+      "copied_sha256": "d7c1ab65972466bccafda72ae55f64382f75791fc687c3f43cfb174b24f0c58a"
+    },
+    {
+      "copy": "templates/case_RANS/constant/triSurface/README.txt",
+      "source_sha256": "9c5f0383777766a24db8b04707a39a73007117cf6d854888a0de56c29e044732",
+      "copied_sha256": "9c5f0383777766a24db8b04707a39a73007117cf6d854888a0de56c29e044732"
+    },
+    {
+      "copy": "templates/case_RANS/system/include/caseDefinition",
+      "source_sha256": "51610c43356490254bc200c55c1cae4fbfcfb7b9309ed73586da48aa7aa543c0",
+      "copied_sha256": "d4261cd5933a3c744aa3f76bf2f12e56bff0cdcd0394a70d94b4afdf95ee289d"
+    },
+    {
+      "copy": "templates/case_RANS/system/include/forceCoeffs",
+      "source_sha256": "b641432526bf53709b046dfb8472927669c0a4ba855fcaf3171c31f7ab32ae2a",
+      "copied_sha256": "aefb42e49fc91bf3a7aa0c0a54ce9da9768a7358635ebbe915f4ed602aa35b32"
+    },
+    {
+      "copy": "fixtures/checkMesh_sample.log",
+      "source_sha256": "da2d27880f1be33cfb685068d9757b5a2177e25c2528574df4e8e261a8d4ff5e",
+      "copied_sha256": "2147cbd78e37916ed811c213747e2350af2d971ea2590c50a81a8bc50eeb340a"
+    },
+    {
+      "copy": "fixtures/surfaceCheck_sample.log",
+      "source_sha256": "6a8a4a6b5f95d4916f8b6204710780de92a2471dec2701b0d23944da2a0f3548",
+      "copied_sha256": "2a95bc4e854e8a336612ac65064f5543ca18089dc7279700f645d3c259b27e92"
+    }
+  ]
+}

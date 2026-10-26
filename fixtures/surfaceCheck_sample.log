@@ -1,0 +1,99 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b8cf4d35-20260127 OPENFOAM=2412 patch=260127 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceCheck -checkSelfIntersection sample_surface.stl
+Date : [redacted]
+Time : [redacted]
+Host : [redacted]
+PID : [redacted]
+I/O    : uncollated
+Case : [redacted]
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surface from "sample_surface.stl" ...
+
+Statistics:
+Triangles    : 356029 in 1 region(s)
+Vertices     : 179568
+Bounding Box : (-1162.3 -960.55 1834.59) (909.95 281.927 2873.97)
+
+Index	Region	Size
+-----	------	----
+0	patch0	356029
+
+
+Surface has no illegal triangles.
+
+Triangle quality (equilateral=1, collapsed=0):
+    0 .. 0.05  : 0.0994189
+    0.05 .. 0.1  : 0.0514818
+    0.1 .. 0.15  : 0.0460243
+    0.15 .. 0.2  : 0.0417438
+    0.2 .. 0.25  : 0.0449963
+    0.25 .. 0.3  : 0.0525491
+    0.3 .. 0.35  : 0.0485635
+    0.35 .. 0.4  : 0.0437408
+    0.4 .. 0.45  : 0.0578127
+    0.45 .. 0.5  : 0.0567987
+    0.5 .. 0.55  : 0.0506167
+    0.55 .. 0.6  : 0.0520295
+    0.6 .. 0.65  : 0.0499454
+    0.65 .. 0.7  : 0.064947
+    0.7 .. 0.75  : 0.0734912
+    0.75 .. 0.8  : 0.0649273
+    0.8 .. 0.85  : 0.0307306
+    0.85 .. 0.9  : 0.0255625
+    0.9 .. 0.95  : 0.0248828
+    0.95 .. 1  : 0.0197372
+
+    min 2.18211e-15 for triangle 290806
+    max 0.999988 for triangle 288594
+
+Dumping bad quality faces to "badFaces"
+Paste this into the input for surfaceSubset
+
+
+Edges:
+    min 0.000532967 for edge 435221 points (-304.384 -753.605 2306.56)(-304.384 -753.605 2306.56)
+    max 213.332 for edge 535103 points (-1127.72 -251.94 1834.59)(-1156.9 -121.086 2000.53)
+
+Checking for points less than 1e-6 of bounding box ((2072.25 1242.48 1039.37) metre) apart.
+    small edge between points 147015 (-303.322 -746.074 2307.98) and 147230 (-303.323 -746.074 2307.98) distance:0.000586224
+    small edge between points 146887 (-304.116 -751.722 2306.92) and 147122 (-304.119 -751.722 2306.92) distance:0.00225933
+    small edge between points 147231 (-304.384 -753.605 2306.56) and 147126 (-304.384 -753.605 2306.56) distance:0.000532967
+    close unconnected points 147017 (-304.383 -753.605 2306.56) and 147231 (-304.384 -753.605 2306.56) distance:0.00168815
+    small edge between points 168600 (-251.02 -710.318 2327.08) and 168706 (-251.018 -710.318 2327.08) distance:0.00196832
+    small edge between points 147026 (-304.915 -757.37 2305.85) and 147234 (-304.915 -757.37 2305.85) distance:0.000586224
+    small edge between points 146599 (-304.913 -757.37 2305.85) and 147026 (-304.915 -757.37 2305.85) distance:0.00225024
+    small edge between points 147240 (-305.445 -761.135 2305.15) and 147239 (-305.446 -761.135 2305.15) distance:0.000576613
+    small edge between points 147027 (-305.445 -761.135 2305.15) and 147240 (-305.445 -761.135 2305.15) distance:0.000586224
+    small edge between points 147131 (-305.976 -764.901 2304.44) and 147242 (-305.976 -764.901 2304.44) distance:0.000549316
+Suppressing further warning messages. Use -outputThreshold to increase number of warnings.
+Found 112 nearby points.
+
+Surface is not closed since not all edges (535596) connected to two faces:
+    connected to one face : 3105
+    connected to >2 faces : 0
+Conflicting face labels:3105
+
+Number of unconnected parts : 1
+
+Number of zones (connected area with consistent normal) : 1
+
+Checking self-intersection.
+Surface is not self-intersecting
+
+
+End
+
+

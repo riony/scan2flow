@@ -1,0 +1,43 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| scan2foam template — mesh quality controls for snappyHexMesh.                   |
+| Targets the project gates: maxNonOrtho < 65, maxSkewness < 4.                |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      meshQualityDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#includeEtc "caseDicts/meshQualityDict"
+
+// Project overrides (tighter than defaults where it matters):
+maxNonOrtho         65;
+maxBoundarySkewness 20;
+maxInternalSkewness 4;
+maxConcave          80;
+minVol              1e-13;
+minTetQuality       1e-15;
+minDeterminant      0.001;
+minFaceWeight       0.02;
+minVolRatio         0.01;
+
+// Fallback constraints for snappy's RELAXED layer-addition pass. snappyHexMesh
+// looks this sub-dict up once addLayersControls/nRelaxedIter is reached; without
+// it the run dies with "Entry 'relaxed' not found in meshQualityControls".
+// Unlisted entries inherit the strict values above.
+relaxed
+{
+    // NB: do NOT loosen maxNonOrtho here. Whatever is allowed, snappy will use:
+    // with 75 the Gen2 open-wheel mesh came back at 74.93 with 317 severely
+    // non-orthogonal faces spread over the bodywork. Holding it at the project
+    // gate makes snappy drop layers in those cells instead, which is the cheaper
+    // trade. Only skewness is genuinely relaxed for the layer pass.
+    maxNonOrtho         65;
+    maxBoundarySkewness 25;
+    maxInternalSkewness 8;
+}
+
+// ************************************************************************* //

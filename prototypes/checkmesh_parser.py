@@ -1,6 +1,8 @@
 """v0.1 log parser. Known limitation: missing failure text can look successful. Do not use as an acceptance gate before fail-closed migration."""
+
 import re
 from pathlib import Path
+
 
 def parse_checkmesh(case: str | Path, log: str = "log.checkMesh") -> dict[str, float]:
     """Extract the project quality gates from a checkMesh log."""

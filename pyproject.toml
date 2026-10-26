@@ -11,7 +11,7 @@ dependencies = ["numpy>=1.24", "trimesh>=4"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.6"]
-prototypes = ["scipy>=1.11"]
+prototypes = ["scipy>=1.11", "pyyaml>=6"]
 
 [project.scripts]
 scan2foam = "scan2foam.cli:main"
@@ -21,3 +21,16 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+# Standard correctness checks and import hygiene, independent of machine settings.
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# Preserve legacy numerical bodies; unused intermediates and lambda spelling
+# remain migration work. Undefined names and syntax errors are still checked.
+"prototypes/**/*.py" = ["F841", "E731", "E741"]

@@ -1,9 +1,12 @@
 """Read-only mesh inspection. No implicit repair, unit conversion or solver run."""
+
 from __future__ import annotations
+
 import argparse
 import json
-from pathlib import Path
 import sys
+from pathlib import Path
+
 import numpy as np
 import trimesh
 
@@ -32,8 +35,11 @@ def boundary_counts(edges: np.ndarray) -> dict[str, int]:
             chains += 1
         else:
             branched += 1
-    return {"boundary_loops": loops, "boundary_open_chains": chains,
-            "boundary_branched_components": branched}
+    return {
+        "boundary_loops": loops,
+        "boundary_open_chains": chains,
+        "boundary_branched_components": branched,
+    }
 
 
 def inspect_mesh(path: Path) -> dict:
