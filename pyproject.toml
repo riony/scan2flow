@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "scan2foam"
+name = "scan2flow"
 version = "0.1.0"
 license = "MIT"
 license-files = ["LICENSE"]
@@ -17,7 +17,7 @@ dev = ["pytest>=8", "ruff>=0.6"]
 prototypes = ["scipy>=1.11", "pyyaml>=6"]
 
 [project.scripts]
-scan2foam = "scan2foam.cli:main"
+scan2flow = "scan2flow.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

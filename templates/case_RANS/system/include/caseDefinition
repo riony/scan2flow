@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam — central case parameters.  Included by controlDict, properties,     |
+| scan2flow — central case parameters.  Included by controlDict, properties,     |
 | and 0.orig fields.  The pipeline (pipeline/mesh.py, solve.py) regenerates    |
 | this file per-vehicle from the case config; the values below are defaults    |
 | for a generic ~4.6 m car, half-body, moving ground.                          |

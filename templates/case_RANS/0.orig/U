@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — velocity. Moving ground (groundType moving).         |
+| scan2flow RANS template — velocity. Moving ground (groundType moving).         |
 | For groundType slip, the generator swaps the 'ground' entry to type slip.   |
 \*---------------------------------------------------------------------------*/
 FoamFile

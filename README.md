@@ -1,4 +1,4 @@
-# scan2foam
+# scan2flow
 
 An experimental computational-geometry and OpenFOAM pre-processing toolkit for surface scan meshes. Version 0.1 provides **read-only mesh inspection**. Automatic repair, verified closure, case generation and CFD-quality gates are roadmap work; this scaffold does not yet turn a scan into a CFD-ready car.
 
@@ -10,8 +10,8 @@ Python 3.11 or later:
 python -m venv .venv
 . .venv/bin/activate
 python -m pip install -e '.[dev]'
-scan2foam inspect fixtures/open_shell.ply
-scan2foam inspect fixtures/rough_patch.ply
+scan2flow inspect fixtures/open_shell.ply
+scan2flow inspect fixtures/rough_patch.ply
 pytest -q
 ruff check .
 ```
@@ -26,7 +26,7 @@ No footage, textures or bystander imagery is included. The numeric geometry rema
 
 ## Layout and current limits
 
-- `src/scan2foam/`: inspection CLI and empty geometry/OpenFOAM namespaces.
+- `src/scan2flow/`: inspection CLI and empty geometry/OpenFOAM namespaces.
 - `prototypes/`: complete deterministic pipeline prototypes and research recipes; migration and validation remain unfinished.
 - `fixtures/`: one decimated open shell and one noisy support patch.
 - `tests/`: CLI/read-only and basic topology checks.
@@ -38,4 +38,6 @@ This is a separate repository built from copies. Its setup does not move or rewr
 
 The code and included geometry fixtures are provided under the [MIT licence](LICENSE), copyright 2026 riony. Dependencies retain their own licences. The owner has confirmed employment-IP clearance.
 
-See `verification.json` for the local installation, tests, lint and repository audit. These checks certify the inspection package and source hygiene, not the optional solver/CAD recipes or physical geometry. Publication and recorded sessions are separate actions; no platform eligibility, pay rate or contract terms are asserted here.
+The project was renamed from `scan2foam` to `scan2flow` on 28 October 2026. Use the `scan2flow` CLI, `scan2flow` Python imports and `SCAN2FLOW_OF_BASHRC` for optional solver prototypes. Existing installations should be reinstalled with the commands above; no legacy command or environment-variable alias is provided.
+
+See `verification.json` for the original pre-rename installation, tests, lint and repository audit, and `rename_verification.json` for the rename checks. The original record retains the former package name and publication state as historical evidence. These checks certify the inspection package and source hygiene, not the optional solver/CAD recipes or physical geometry. Publication and recorded sessions are separate actions; no platform eligibility, pay rate or contract terms are asserted here.

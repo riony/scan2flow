@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — steady simpleFoam fvSchemes (kOmegaSST).              |
+| scan2flow RANS template — steady simpleFoam fvSchemes (kOmegaSST).              |
 | Bounded second-order-upwind on momentum; robust on automotive external aero.|
 \*---------------------------------------------------------------------------*/
 FoamFile

@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-28",
+  "scope": "Project rename; numerical logic, fixture data and upstream provenance unchanged",
+  "previous_name": "scan2foam",
+  "name": "scan2flow",
+  "base_commit": "a17712e78327d8b7eac9487f942cdb255a746c7d",
+  "python": "3.14.4",
+  "versions": {
+    "scan2flow": "0.1.0",
+    "numpy": "2.5.4",
+    "trimesh": "5.2.0",
+    "pytest": "9.2.0",
+    "ruff": "0.17.3"
+  },
+  "checks": {
+    "fresh_editable_install": "passed",
+    "pytest_passed": 5,
+    "ruff": "passed",
+    "pip_check": "passed",
+    "installed_console_entrypoint": "help and open-shell inspection passed",
+    "template_shell_syntax": "3 passed",
+    "fixture_files_byte_identical": 6,
+    "historical_verification_byte_identical": true,
+    "active_old_namespace_hits": 0,
+    "git_diff_check": "passed",
+    "history_filename_secret_scan": "passed",
+    "history_content_blobs_scanned": 79,
+    "history_content_secret_scan": "no matches in configured patterns",
+    "working_tree_secret_scan": "no matches in configured patterns"
+  },
+  "changed_file_hashes": [
+    {
+      "file": "README.md",
+      "previous_path": null,
+      "previous_sha256": "35f04f9bfc0abed30e4de6c3bd87f308250349dbe696e6a8406e491484513c56",
+      "sha256": "0f8df6126d18af630b20a0bdd054a7bc83508410af2d981c295e8b56244dc768"
+    },
+    {
+      "file": "prototypes/MIGRATION.md",
+      "previous_path": null,
+      "previous_sha256": "2ed2284b8430a6597e0e841fab2f4ebfc046b52063a7312177c7942c1443f333",
+      "sha256": "d141e819c36f7b10234c16ed57295d6716c4788d6ffb83c808368cc74b93545e"
+    },
+    {
+      "file": "prototypes/README.md",
+      "previous_path": null,
+      "previous_sha256": "8ffa4701148bbe0fde3e6b4eec1520f1d34d2a9909731b41b2fb8ded8b0f7b7f",
+      "sha256": "ceb81a306e98716e81b8416ef2c8e580a8191204e4e41213c8a127518739b5b8"
+    },
+    {
+      "file": "prototypes/pipeline/foam.py",
+      "previous_path": null,
+      "previous_sha256": "24777e656d8e2797233828ba4a7fe7cf9ae2e3079d2cb8340d4a08560774b948",
+      "sha256": "0fe673904264541d97557aa5a9ab337afd8a7e18209ef122335082e4aad63210"
+    },
+    {
+      "file": "prototypes/pipeline/mesh.py",
+      "previous_path": null,
+      "previous_sha256": "123ba3c885bf0ae40f44546ec05bfcce4630433a70a95ab76e2045fcfac2388d",
+      "sha256": "59e2a843af04f0ebc20bca5415d88d9d1a4f510f303bdbb9dc494e11e7806895"
+    },
+    {
+      "file": "prototypes/sew_shell.py",
+      "previous_path": null,
+      "previous_sha256": "2b3857daab6d511d3a18717b32b250cdbe1a6e5303bba2d37b202f9044e85b27",
+      "sha256": "d8d1c31b1e8af705544e2db314126227da6704c88bd211cd1102c23ac6898151"
+    },
+    {
+      "file": "prototypes/source_manifest.json",
+      "previous_path": null,
+      "previous_sha256": "42721fd9f411ca3e95d6619c5187c9cc078ab833c666b4a0dbbaa0321210e7e8",
+      "sha256": "4a4c322b044c3754d61cc95cc6cf7c319b5d009aed10d1d4c297f1ff14ec4a06"
+    },
+    {
+      "file": "prototypes/symmetry_closure.py",
+      "previous_path": null,
+      "previous_sha256": "d894c48d458956b4249cf21ac904d81b13afbc5e41728868206f1ac4eb6dc63e",
+      "sha256": "d8b66e179fb9514968e7360c928ae61f71785494a6377972e53721190c985181"
+    },
+    {
+      "file": "prototypes/tiered_assembly.py",
+      "previous_path": null,
+      "previous_sha256": "1c5e3f023486d2235f4636215c81b7ff9a4c5999b0d2add8095e06eaed02881c",
+      "sha256": "3b595d530749708484f3f9e72d00a99a78d6c070fa95f646058d21050385710a"
+    },
+    {
+      "file": "pyproject.toml",
+      "previous_path": null,
+      "previous_sha256": "e60b93eb259bdc9a0ed6b2c7167ffa8d77f0bbfa9d92e40e4467de0dd988697c",
+      "sha256": "0eb039b216c5e0c9dbdae9bb3cd42c326cb6967026f0cb9c425b3cf91ae1caeb"
+    },
+    {
+      "file": "src/scan2flow/__init__.py",
+      "previous_path": "src/scan2foam/__init__.py",
+      "previous_sha256": "efdd84284e4841dacda56c85475da12e24e96c59f9fa5276103e36fd427ed7ed",
+      "sha256": "efdd84284e4841dacda56c85475da12e24e96c59f9fa5276103e36fd427ed7ed"
+    },
+    {
+      "file": "src/scan2flow/cli.py",
+      "previous_path": "src/scan2foam/cli.py",
+      "previous_sha256": "c5ad583a7fe4abf0870d735c9b6af4ba46206f77f767a5ffc22c6aaa1b0cd7a9",
+      "sha256": "781470752a4728a0e74346a7cd1ef4e84a817109b7525f8ebc4bac72b70a34ae"
+    },
+    {
+      "file": "src/scan2flow/geometry/__init__.py",
+      "previous_path": "src/scan2foam/geometry/__init__.py",
+      "previous_sha256": "d5ed4480f3aaf95484bdea76772345c067e6e5d6440ae8c6e264633884aaa6ec",
+      "sha256": "d5ed4480f3aaf95484bdea76772345c067e6e5d6440ae8c6e264633884aaa6ec"
+    },
+    {
+      "file": "src/scan2flow/openfoam/__init__.py",
+      "previous_path": "src/scan2foam/openfoam/__init__.py",
+      "previous_sha256": "2926a100f19e7b55be207c8fc1ce198d9f5e559d4fdf5b733cfd20810ff5abb4",
+      "sha256": "2926a100f19e7b55be207c8fc1ce198d9f5e559d4fdf5b733cfd20810ff5abb4"
+    },
+    {
+      "file": "templates/case_RANS/0.orig/U",
+      "previous_path": null,
+      "previous_sha256": "9cc905ea1e003d2986ff48172129317295462718b8df1951ab8633575be7e2cb",
+      "sha256": "9af7d6d33b9adfa190b642424c219e392f468e0f05fb87d5ff5170ac36a9af2a"
+    },
+    {
+      "file": "templates/case_RANS/0.orig/k",
+      "previous_path": null,
+      "previous_sha256": "a70f46324dd9a0064febd57e2cea3af72c0767e006b67e8c13ed761482929124",
+      "sha256": "b4229a4e277553adfe862eddc84883acfd7d887c5e6f6b19b0232626aae65d2c"
+    },
+    {
+      "file": "templates/case_RANS/0.orig/nut",
+      "previous_path": null,
+      "previous_sha256": "06c51e40cc89411c7b14e9e54a7b6c34b136c0ccc1187df97408d303357b346c",
+      "sha256": "d667914c6d53f3cb0ef7ad8d39b1de719ad12e61230695a60c7949f293352e0e"
+    },
+    {
+      "file": "templates/case_RANS/0.orig/omega",
+      "previous_path": null,
+      "previous_sha256": "42df192046074d87c5706a2f39866586f90bd78f2e1ecff70ecc9b28db085dfb",
+      "sha256": "1652951ea2f643b093c3c6b86fcddb73535ddcd903c386823aa9f0ec83c33c6f"
+    },
+    {
+      "file": "templates/case_RANS/0.orig/p",
+      "previous_path": null,
+      "previous_sha256": "f2e55f72018464bdd2d6d71de7966d1a5f9a1b4c1009de0c5e3d9ec73f241bdc",
+      "sha256": "506a6a37aa17d0f0c57ec09c3e83e70e9083cacee6b70403c2ff54f96746a60b"
+    },
+    {
+      "file": "templates/case_RANS/Allclean",
+      "previous_path": null,
+      "previous_sha256": "af8de5ffc45a0b0c58fcd41bdc6a77377a3aa5c17013e784f97811c75cf2da5f",
+      "sha256": "a2e490e01b4ac6b7bfbcec7b2f95681c57c05fb13883c73e884834f46b9d39be"
+    },
+    {
+      "file": "templates/case_RANS/Allmesh",
+      "previous_path": null,
+      "previous_sha256": "9db941b6f710e23543ebc321eb2df2b6e2c17513ad2d89f680780f36f6952f08",
+      "sha256": "fa9af366a75c4a197975dc9f3730d5b176bc2de52f292a0a80e6cf960fb3984b"
+    },
+    {
+      "file": "templates/case_RANS/Allrun",
+      "previous_path": null,
+      "previous_sha256": "9d5b900db164bf4924c25abb6bacc853a603de04631e3a26cb4aadfbf77f9815",
+      "sha256": "be0e8b4bafc012853f8e09b4ae4bb2c06342de003b4b4f436f1645568201e770"
+    },
+    {
+      "file": "templates/case_RANS/constant/transportProperties",
+      "previous_path": null,
+      "previous_sha256": "d7c1ab65972466bccafda72ae55f64382f75791fc687c3f43cfb174b24f0c58a",
+      "sha256": "27a9a6d5f0833045ad2b758e79c93faa80177696f906fe315196e046607e2c20"
+    },
+    {
+      "file": "templates/case_RANS/constant/turbulenceProperties",
+      "previous_path": null,
+      "previous_sha256": "6e2d50023a2aa8f2970beacdb247838b8773fb158d5939d6c3186dcf4061fc7f",
+      "sha256": "a2eb2c49d5995a01b8750fe394924876f2471bdb903756bc1d5aa8fafad9f9e4"
+    },
+    {
+      "file": "templates/case_RANS/system/blockMeshDict",
+      "previous_path": null,
+      "previous_sha256": "59bfdf9ff9642bb7359a963d2a0cc692f3a3da5b76fc389258ace1c145b54990",
+      "sha256": "398f110debb06068be86d54c0edd02f798b55bd2aed603975e39620568d138f9"
+    },
+    {
+      "file": "templates/case_RANS/system/controlDict",
+      "previous_path": null,
+      "previous_sha256": "12d2ff39b4dbe7f261b02408336b0a36da249c80925e3f6e1fea2bd6f7bd485e",
+      "sha256": "03ee8f2a1de1e64e941faadb41ab235077ff80c2b6563539d781cd25a154db8e"
+    },
+    {
+      "file": "templates/case_RANS/system/decomposeParDict",
+      "previous_path": null,
+      "previous_sha256": "dc139ef86f1894f8f8f276c79dff41bf235b2faf32181fb54b10a00ae20a9f8a",
+      "sha256": "8e2c0b0116bddf13fcdf474703cdbc4bf8e6a8b321d1964509b1ff46987c7873"
+    },
+    {
+      "file": "templates/case_RANS/system/fvSchemes",
+      "previous_path": null,
+      "previous_sha256": "837d52dae1a98709838d732c5c04924b26569e039200b2a13485291eee7bab98",
+      "sha256": "79a0aabeb2228e15cf801a2ce75b91a513a81b80de91a4793485703723bba679"
+    },
+    {
+      "file": "templates/case_RANS/system/fvSolution",
+      "previous_path": null,
+      "previous_sha256": "8a6405534298a843d77a26d1384a14ed4821255774304c52e554ada1fbabbe02",
+      "sha256": "bf7b5cc336c7cd0556ed684a7f25f8228c0da4c43b921d1419aec4bfd214cd16"
+    },
+    {
+      "file": "templates/case_RANS/system/include/caseDefinition",
+      "previous_path": null,
+      "previous_sha256": "d4261cd5933a3c744aa3f76bf2f12e56bff0cdcd0394a70d94b4afdf95ee289d",
+      "sha256": "0518629fe6ad4b7a6c2a4315e570874ff65326be6b7c59d9d619669a1fc5084b"
+    },
+    {
+      "file": "templates/case_RANS/system/include/forceCoeffs",
+      "previous_path": null,
+      "previous_sha256": "aefb42e49fc91bf3a7aa0c0a54ce9da9768a7358635ebbe915f4ed602aa35b32",
+      "sha256": "dc3d8bb7a7584f88d81afc7de8b3557ee9490639dc23c6255f65c61de8c5c251"
+    },
+    {
+      "file": "templates/case_RANS/system/meshQualityDict",
+      "previous_path": null,
+      "previous_sha256": "d7df4d18d24d55bd15165ed9816fb53298d6683f61d99eb60fe5d71433ee3d3e",
+      "sha256": "a0ceec8286bcf430f1471634aeaa52cfce7d7aa677fa47d367fd10ba34a20123"
+    },
+    {
+      "file": "templates/case_RANS/system/snappyHexMeshDict",
+      "previous_path": null,
+      "previous_sha256": "5b32ec9a3c5f847b4c984fdc5b61799c0f008cc9f00362d259dca150849253de",
+      "sha256": "d6413119cf1b1b1991fe5ca110655f4640a4e4591ec49213c67ae3f2156efbb3"
+    },
+    {
+      "file": "templates/case_RANS/system/surfaceFeatureExtractDict",
+      "previous_path": null,
+      "previous_sha256": "f65ee7bb07bf6b29dc4f81d8fd590ecc02b3e58cad328a6f107307239e0adf08",
+      "sha256": "3700ca4c476704f4d38af056c9bb3d5588ecea01eb6a99f8496658c9380d065a"
+    },
+    {
+      "file": "tests/test_smoke.py",
+      "previous_path": null,
+      "previous_sha256": "6836bc22cbc21c5283abc4feb9d22b96409565c9ee05157185c2a63b10844153",
+      "sha256": "7ff1a66c6563f12b7ee0c8543d44d2c01b6c85d70c30d69a8715bd1c0be033c6"
+    }
+  ],
+  "limits": [
+    "No solver or CAD runtime executed",
+    "No upstream archive accessed",
+    "Secret-pattern scans are not proof of absence"
+  ],
+  "compatibility": "CLI/import namespace scan2flow; optional prototype environment SCAN2FLOW_OF_BASHRC; no legacy aliases; reinstall existing editable environments"
+}

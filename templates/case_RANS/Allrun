@@ -1,5 +1,5 @@
 #!/bin/bash
-# scan2foam RANS template — full run: mesh, initialise, solve, reconstruct.
+# scan2flow RANS template — full run: mesh, initialise, solve, reconstruct.
 cd "${0%/*}" || exit 1
 . "${WM_PROJECT_DIR:?}/bin/tools/RunFunctions"
 

@@ -181,5 +181,6 @@
       "source_sha256": "6a8a4a6b5f95d4916f8b6204710780de92a2471dec2701b0d23944da2a0f3548",
       "copied_sha256": "2a95bc4e854e8a336612ac65064f5543ca18089dc7279700f645d3c259b27e92"
     }
-  ]
+  ],
+  "hash_scope": "source_sha256 and copied_sha256 record the original source-copy operation before the project rename. They remain historical; rename_verification.json records hashes for files changed by the rename."
 }

@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam template — parallel decomposition (scotch, nCores from caseDefinition)|
+| scan2flow template — parallel decomposition (scotch, nCores from caseDefinition)|
 \*---------------------------------------------------------------------------*/
 FoamFile
 {

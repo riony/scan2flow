@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — specific dissipation rate omega (k-omega SST).       |
+| scan2flow RANS template — specific dissipation rate omega (k-omega SST).       |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {

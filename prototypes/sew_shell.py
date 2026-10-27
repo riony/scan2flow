@@ -524,7 +524,7 @@ def main():
 
     # Run OpenFOAM surfaceCheck -checkSelfIntersection on the metric STL
     of_cmd = (
-        f"source {os.environ['SCAN2FOAM_OF_BASHRC']} && "
+        f"source {os.environ['SCAN2FLOW_OF_BASHRC']} && "
         f"surfaceCheck -checkSelfIntersection {stl_metric_path}"
     )
     proc = subprocess.run(["bash", "-c", of_cmd], capture_output=True, text=True, check=True)

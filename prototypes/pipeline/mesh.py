@@ -38,7 +38,7 @@ def _assert_orientation_verified(case: Path):
                     f"{md}: orientation.verified is false.\n"
                     f"  1) view {png} — the nose MUST point to -x (left), flow is +x\n"
                     f"  2) then run: python -m pipeline.ingest verify {md.parent}\n"
-                    f"  (silent-reversal guard; see scan2foam-ingest-orientation-bug)"
+                    f"  (silent-reversal guard; see scan2flow-ingest-orientation-bug)"
                 )
             return
     print(

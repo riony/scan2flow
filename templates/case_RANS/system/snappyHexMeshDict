@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam template — snappyHexMesh. Castellate + snap + 6 prism layers.        |
+| scan2flow template — snappyHexMesh. Castellate + snap + 6 prism layers.        |
 | Single 'car' surface by default; the generator adds per-patch regions       |
 | (body/glass/wheels/...) and nested refinement boxes. Targets y+ 30-300      |
 | with wall functions. Sizes scale up for production via the generator.       |

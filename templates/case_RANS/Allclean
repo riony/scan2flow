@@ -1,5 +1,5 @@
 #!/bin/bash
-# scan2foam RANS template — clean generated files, keep the case definition.
+# scan2flow RANS template — clean generated files, keep the case definition.
 # Preserves: system/, constant/triSurface/, constant/*Properties, 0.orig/.
 cd "${0%/*}" || exit 1
 . "${WM_PROJECT_DIR:?}/bin/tools/CleanFunctions"

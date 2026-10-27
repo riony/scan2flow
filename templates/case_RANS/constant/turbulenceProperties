@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — RAS (k-omega SST by default).                        |
+| scan2flow RANS template — RAS (k-omega SST by default).                        |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {

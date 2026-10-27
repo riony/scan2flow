@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam — force & moment coefficients on the vehicle surface.                 |
+| scan2flow — force & moment coefficients on the vehicle surface.                 |
 | Included by controlDict. Reference values come from caseDefinition.          |
 | For half-body symmetry, Aref is the HALF frontal area (see caseDefinition).  |
 \*---------------------------------------------------------------------------*/

@@ -3,7 +3,7 @@ from pathlib import Path
 
 import trimesh
 
-from scan2foam.cli import inspect_mesh, main
+from scan2flow.cli import inspect_mesh, main
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures"
 
@@ -39,4 +39,4 @@ def test_topology_and_missing_input(tmp_path, capsys):
     assert result["boundary_branched_components"] == 1
     assert result["boundary_loops"] == 0
     assert main(["inspect", str(tmp_path / "missing.ply")]) == 2
-    assert "scan2foam:" in capsys.readouterr().err
+    assert "scan2flow:" in capsys.readouterr().err

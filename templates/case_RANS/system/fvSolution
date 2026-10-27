@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — SIMPLEC fvSolution. Capped-iteration GAMG/smooth      |
+| scan2flow RANS template — SIMPLEC fvSolution. Capped-iteration GAMG/smooth      |
 | solvers (AutoCFD style) for fast steady convergence on large meshes.        |
 \*---------------------------------------------------------------------------*/
 FoamFile

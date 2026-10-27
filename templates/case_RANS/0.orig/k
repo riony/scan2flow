@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — turbulent kinetic energy (k-omega SST).              |
+| scan2flow RANS template — turbulent kinetic energy (k-omega SST).              |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {

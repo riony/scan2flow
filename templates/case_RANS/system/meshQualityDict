@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam template — mesh quality controls for snappyHexMesh.                   |
+| scan2flow template — mesh quality controls for snappyHexMesh.                   |
 | Targets the project gates: maxNonOrtho < 65, maxSkewness < 4.                |
 \*---------------------------------------------------------------------------*/
 FoamFile

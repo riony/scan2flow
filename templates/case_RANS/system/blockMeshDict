@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam template — background mesh. Half-body car domain (~4.6 m car).        |
+| scan2flow template — background mesh. Half-body car domain (~4.6 m car).        |
 | Car nose near x=0, body spans ~0..4.6, symmetry plane at y=0, ground z=0.    |
 | Extents (multiples of car length L≈4.6): 3L upstream, ~8L downstream,        |
 | 2.5L half-width, 3L height. Base cell ~0.7 m; snappyHexMesh refines.         |

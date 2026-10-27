@@ -84,7 +84,7 @@ def main(argv: list[str] | None = None) -> int:
     try:
         result = inspect_mesh(args.mesh)
     except (OSError, ValueError, TypeError, IndexError) as exc:
-        print(f"scan2foam: {exc}", file=sys.stderr)
+        print(f"scan2flow: {exc}", file=sys.stderr)
         return 2
     print(json.dumps(result, indent=2, allow_nan=False))
     return 0

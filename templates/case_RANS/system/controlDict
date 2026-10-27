@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — simpleFoam steady-state controlDict.                  |
+| scan2flow RANS template — simpleFoam steady-state controlDict.                  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {

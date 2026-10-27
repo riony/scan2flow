@@ -415,7 +415,7 @@ def build_wheel_nurbs_solid(
 
 
 def run_openfoam_surface_check(stl_path: Path, log_path: Path) -> dict:
-    cmd = f"source {os.environ['SCAN2FOAM_OF_BASHRC']} && surfaceCheck -checkSelfIntersection {stl_path}"
+    cmd = f"source {os.environ['SCAN2FLOW_OF_BASHRC']} && surfaceCheck -checkSelfIntersection {stl_path}"
     proc = subprocess.run(
         ["bash", "-c", cmd], cwd=str(HERE), capture_output=True, text=True, check=True
     )

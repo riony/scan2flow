@@ -1,5 +1,5 @@
 #!/bin/bash
-# scan2foam RANS template — mesh generation (parallel snappyHexMesh).
+# scan2flow RANS template — mesh generation (parallel snappyHexMesh).
 cd "${0%/*}" || exit 1
 . "${WM_PROJECT_DIR:?}/bin/tools/RunFunctions"
 

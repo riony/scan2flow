@@ -1,5 +1,5 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| scan2foam RANS template — turbulent viscosity (wall functions, y+ 30-300).     |
+| scan2flow RANS template — turbulent viscosity (wall functions, y+ 30-300).     |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {

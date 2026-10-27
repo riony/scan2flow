@@ -345,7 +345,7 @@ def main(workspace, artifact_root, mm_per_unit):
 
     # 8. Run OpenFOAM 2412 surfaceCheck -checkSelfIntersection on the metric STL
     of_cmd = (
-        f"source {os.environ['SCAN2FOAM_OF_BASHRC']} && "
+        f"source {os.environ['SCAN2FLOW_OF_BASHRC']} && "
         f"surfaceCheck -checkSelfIntersection {stl_metric_path}"
     )
     proc = subprocess.run(

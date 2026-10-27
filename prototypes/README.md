@@ -20,7 +20,7 @@ The original four helper extracts remain for comparison. `source_manifest.json` 
 
 `pip install -e '.[prototypes]'` adds SciPy and PyYAML. Individual recipes also require compatible optional CAD/visualization libraries (OpenCASCADE bindings, VTK/PyVista, Open3D, OpenCV, Matplotlib or mesh boolean/voxel support). These heavy optional runtimes are deliberately not part of the inspection CLI. The clean-environment gate tests the CLI and solver-independent parsers, and syntax-checks every Python copy; it does not certify the optional CAD or solver recipes.
 
-Use a disposable workspace containing copies of the required geometry, curve definitions and camera-coordinate data. Recipes retain legacy input filenames/schema; the two small mesh fixtures do not supply those inputs. Do not point these scripts at an evidence archive. Set `SCAN2FOAM_OF_BASHRC` explicitly before any optional solver call. No solver, rendering or reconstruction runs during install or the tests.
+Use a disposable workspace containing copies of the required geometry, curve definitions and camera-coordinate data. Recipes retain legacy input filenames/schema; the two small mesh fixtures do not supply those inputs. Do not point these scripts at an evidence archive. Set `SCAN2FLOW_OF_BASHRC` explicitly before any optional solver call. No solver, rendering or reconstruction runs during install or the tests.
 
 The shell wrappers still build command strings and accept trusted local inputs only; safe argument-vector orchestration remains milestone 8. `templates/case_RANS/Allclean` is destructive within its case. Full recipe execution can write outputs and invoke external software. The CLI is read-only.
 

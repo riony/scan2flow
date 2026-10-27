@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 def of_bashrc() -> str:
-    return os.environ["SCAN2FOAM_OF_BASHRC"]
+    return os.environ["SCAN2FLOW_OF_BASHRC"]
 
 
 def run(cmd: str, cwd: str | Path, log: str | None = None, check: bool = True) -> int:
