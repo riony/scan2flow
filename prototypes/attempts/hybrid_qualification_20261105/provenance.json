@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "scope": "Historical prototype extraction; no production CLI integration.",
+  "snapshot_policy": "Retained available source only. Dates describe experiments, not newly recreated source versions; overwritten or deleted versions are not invented.",
+  "publication_filter": "Code and compact scalar outcomes only. No captured or derived images, camera/mask/pixel artifacts, saved geometry, learned inference, private paths, hostnames or saved per-point arrays.",
+  "files": [
+    {
+      "file": "remesh_carrier.cpp",
+      "sha256": "68ad2cfb00951c9bc8fbd7d516341f27727750be15ac9599b05bed3b0257dfa1",
+      "sources": [
+        {
+          "artifact_basename": "remesh_carrier.cpp",
+          "sha256": "68ad2cfb00951c9bc8fbd7d516341f27727750be15ac9599b05bed3b0257dfa1",
+          "extracted_symbols_or_sections": "whole retained authored remesher"
+        }
+      ],
+      "adaptations": [
+        "Unchanged retained source; no native binary or saved geometry copied.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "transfer.py",
+      "sha256": "7db6d42ad3764d21560cb4fd4d90dae9787e8e22ccdab33d4a57cadd71ccd548",
+      "sources": [
+        {
+          "artifact_basename": "candidate_job.py",
+          "sha256": "d8b1fecf2c1d35b56442345c5fb5f38eea2e9a5c9e615e6c5f9206217d1db7cb",
+          "extracted_symbols_or_sections": "feature weights, composite projection, quality/crease damping, transfer tags lines 62-130"
+        }
+      ],
+      "adaptations": [
+        "Removed archive reads, nearest-surface queries and output write; arguments supply existing projected targets.",
+        "Unchanged numerical thresholds and 30-iteration damping body.",
+        "Returns mesh and provenance arrays instead of writing an NPZ or launching a runner.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    }
+  ],
+  "historical_outcomes": [
+    {
+      "id": "h104-prior-remeshed-hybrid",
+      "historical_date": "2026-11-05",
+      "outcome": "Retained final evaluator passes carrier/hybrid, 323,748 faces. Original runner failed exit1; first-pass verdict unknown.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "58be8e86fa435d9500994f6f4375edad498f28ce5fea4e57eb431a272737b302"
+        },
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "f395e9b2b0bb9db9d802d67ebf48fd79a64c654f7c99ba2a4ecdcf1afce2ea0f"
+        },
+        {
+          "artifact_basename": "process.json",
+          "sha256": "b3f2f8e43393c635b0c406afeba1d768495fb075c3bdf84c2acba2bab3b2fabf"
+        }
+      ],
+      "limitations": [
+        "Closed-prior CGAL remesh, OpenVDB transfer guide, surviving donor. Not VDB-extracted carrier.",
+        "Post-scoring evaluator amendments must remain explicit; source/assessment overwrite means no reconstructed original diff or verdict."
+      ]
+    },
+    {
+      "id": "h105-record-reconciliation",
+      "historical_date": "2026-11-05",
+      "outcome": "Records-only correction and matched CFD protocol preparation.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "first_pass_unavailable.json",
+          "sha256": "3c295062753c15ecb330697c1667492ee07fc3dada3b331d6e2bd5acbff07343"
+        },
+        {
+          "artifact_basename": "evaluator_history.json",
+          "sha256": "4bfaf8872842e0f045071ddf10b01603da088eae923170ae2dab4e3276498b72"
+        },
+        {
+          "artifact_basename": "runner_recovery.json",
+          "sha256": "5e68e97a761819cdbeb68dbfecfd7f1380f136f56ecd6542b25b47b56491e412"
+        },
+        {
+          "artifact_basename": "archive_deletion_ledger.json",
+          "sha256": "7118e69037b2ac1927587c0dc447892837fba6a9ffbbd234dce024a8580812b2"
+        },
+        {
+          "artifact_basename": "qualification_scope.json",
+          "sha256": "d72738025efc1ba110affa94d5a6edb748da10dba884128a44d79a7fc509f8fe"
+        }
+      ],
+      "limitations": [
+        "Metadata donor.json/donor_vdb.json recovery is separate from evaluator mask changes.",
+        "Protocol 900s/16GB vs actual guard 1200s/32GiB mismatch, despite observed usage below both.",
+        "Historic stage1_hybrid_amendment3 directory deletion outside protected 49 files is recorded; exact lost contents/hashes unavailable.",
+        "No new geometry, evaluator replay, meshing or CFD."
+      ]
+    }
+  ],
+  "validation_scope": "Synthetic text/array regression tests; optional heavy functions and larger native remesher remain unexecuted. No historical control rerun.",
+  "verification_helpers": [
+    {
+      "file": "tests/test_control_attempts.py",
+      "sha256": "8b79e79c4ac06276a772924ce5e8dc30082997259469b8feb79577ed5448783e",
+      "scope": "Synthetic text/array tests; no captured source reads."
+    }
+  ]
+}
