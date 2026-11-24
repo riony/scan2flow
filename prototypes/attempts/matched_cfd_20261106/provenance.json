@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "scope": "Historical prototype extraction; no production CLI integration.",
+  "snapshot_policy": "Retained available source only. Dates describe experiments, not newly recreated source versions; overwritten or deleted versions are not invented.",
+  "publication_filter": "Code and compact scalar outcomes only. No captured or derived images, camera/mask/pixel artifacts, saved geometry, learned inference, private paths, hostnames or saved per-point arrays.",
+  "files": [
+    {
+      "file": "evaluate.py",
+      "sha256": "2587afcb029041a62fa0cbc83fdedf972579326a2e8edec1562b231c596cda4f",
+      "sources": [
+        {
+          "artifact_basename": "evaluate.py",
+          "sha256": "00a5bdd97ab423c695c7db1d7be95935e19ad378a9628aa7757d0b0ebadd0056",
+          "extracted_symbols_or_sections": "FLOAT, PATCHES, FATAL, one, complete_log, parse_mesh, table, force_metrics"
+        }
+      ],
+      "adaptations": [
+        "Only pure text/array functions retained; no common.py path constants, case writes, launchers or archive reads.",
+        "Historical protocol constants and arithmetic unchanged.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "gate.py",
+      "sha256": "d78b9cf9e1cf7ab7ea89ffadc9fd613fc9f33c55d0843188dd4c6ece8a485207",
+      "sources": [
+        {
+          "artifact_basename": "gate.py",
+          "sha256": "b95ca893dc6cf15ff5852115905babd5d4b2c2d7a6c525ca629841813c1e074e",
+          "extracted_symbols_or_sections": "QUALITY, _sha, _inputs, _calibration_checks, evaluate_check, evaluate_diagnostic"
+        }
+      ],
+      "adaptations": [
+        "Legacy private-folder import loader replaced with sibling pure parser import.",
+        "Parser hash points to actual local sibling file; numerical and invocation policy unchanged.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "cellset.py",
+      "sha256": "e6709d545d40c8ceb92604b0cae44ec610f18596f80214daed3af18b9af8387d",
+      "sources": [
+        {
+          "artifact_basename": "native_diagnostics.py",
+          "sha256": "e1774087090bb9fb300df853c148af07f148a2beee6814a992485e850d7143e5",
+          "extracted_symbols_or_sections": "ARCH, binary, cell_set"
+        },
+        {
+          "artifact_basename": "native_diagnostics.before_empty_set_fix.py",
+          "sha256": "6d47decb13099c043196e906ed035ecf053d6b317532adcd1a6f01e9ae97176c",
+          "extracted_symbols_or_sections": "cell_set renamed cell_set_before_compact_zero_fix"
+        }
+      ],
+      "adaptations": [
+        "Only narrow file parser retained; native concavity formulas and mesh traversal excluded.",
+        "No experiment-specific saved input path.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    }
+  ],
+  "historical_outcomes": [
+    {
+      "id": "cf01-stiltless-preflight-hold",
+      "historical_date": "2026-11-05",
+      "outcome": "Baseline facet preservation and uniform triangle-quality gate conflict; held for owner amendment.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment_before_approved_resume.json",
+          "sha256": "f7cce3a0a0cf9b46144cfc7920a3cf3ccf1ca381971c00fd6ac201353e0c5a23"
+        },
+        {
+          "artifact_basename": "proposed_baseline_quality_amendment.json",
+          "sha256": "edda179de3c70354a0d764fb270003a7863dc787e553c6d1690779bee0d13e50"
+        }
+      ],
+      "limitations": [
+        "Do not replace initial infeasibility with later accepted-baseline result."
+      ]
+    },
+    {
+      "id": "cf02-baseline-quality-exception",
+      "historical_date": "2026-11-06",
+      "outcome": "Owner approved baseline-only input-triangle-quality exception; both surfaces later qualified.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "amendment_authorization.json",
+          "sha256": "9653a56126596e0120f91aaab374272cb5f8ced16b7e84a65d159523ca04f90c"
+        },
+        {
+          "artifact_basename": "effective_protocol.json",
+          "sha256": "b8d3ea94530ffa27305f4dbcd2734a409a3d3c42c0533d1cd3c3e871d799691f"
+        },
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "b99345447a6f79b89116140289e21c1a27ee6b7b76b3ba9214ce458b7dda74bd"
+        }
+      ],
+      "limitations": [
+        "owner_date explicitly Nov6; UTC timestamps are Nov5 evening. Do not use directory date for every event.",
+        "Baseline original 412 body facets retained, 152 cap triangles; H1 unchanged. All other gates preserved."
+      ]
+    },
+    {
+      "id": "cf03-baseline-allgeometry-stop",
+      "historical_date": "2026-11-06",
+      "outcome": "Baseline 764,724-cell volume mesh fails full allGeometry with 28,449 concave cells and one failed check, despite zero exit code.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "a1683c58a8877430544f0c53c609b109b62d98c9ad7bf9d8c2cd1d03a699c2a2"
+        },
+        {
+          "artifact_basename": "mesh_assessment.json",
+          "sha256": "4e140e4ecb7f7a44014bb5cc93c4fa763ec708b61b9881a141811d037301ed91"
+        }
+      ],
+      "limitations": [
+        "H1 mesh and both solves unstarted. No H1 aero verdict.",
+        "Keep setup interruptions distinct: zero-distance assertion, parent-context include expansion, Info().precision compile spelling."
+      ]
+    },
+    {
+      "id": "cf04-concavity-diagnosis",
+      "historical_date": "2026-11-06",
+      "outcome": "Read-only diagnosis reconciled all saved flags; 28,443/28,449 touch level transitions.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "b18c8a905cacac057995cd172a3a195bf43599a90c2dc2a5c51986d35e2f2385"
+        },
+        {
+          "artifact_basename": "location_analysis.json",
+          "sha256": "d3d026c0eaeecdeae3aa858ce8ec5e1b739c98789a1385f01b6d53d929f1babf"
+        }
+      ],
+      "limitations": [
+        "nSmoothInternal 3 was proposed only and did not run. Correlation is not causal proof. Optional inspector failures/proximity import failure preserved."
+      ]
+    },
+    {
+      "id": "cf05-control-plan-review",
+      "historical_date": "2026-11-06",
+      "outcome": "Review-only corrected historical SDF mesh identity, frozen matched dictionaries and distinct determinant tests.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "review_evidence.json",
+          "sha256": "784fbd81d8698521c3509968e18309894eb7e9bf5e265034d3942d60363d2ab1"
+        }
+      ],
+      "limitations": [
+        "No new executable selected from this event. Historical June v2512 mesh vs current v2412 and reconstructed copy caveats remain."
+      ]
+    },
+    {
+      "id": "cf06-configured-quality-calibration",
+      "historical_date": "2026-11-06",
+      "outcome": "Owner-amended primary allTopology+meshQuality policy calibrated on saved SDF control; allGeometry retained diagnostic only.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "accepted_gate_amendment.json",
+          "sha256": "3ea045f786d9680a5bdb28abc3bacc20d7bda024af99c0783e0d1467493f7fa6"
+        },
+        {
+          "artifact_basename": "check_policy_assessment.json",
+          "sha256": "886543cb8d9d48a8debaac388f0e9669a73c2e57c58afb6b3583196b86aaf6e0"
+        }
+      ],
+      "limitations": [
+        "No baseline remesh or internal-smoothing variant. Original failed full-allGeometry acceptance remains historical failure."
+      ]
+    },
+    {
+      "id": "cf07-matched-aero-pass",
+      "historical_date": "2026-11-06",
+      "outcome": "Saved baseline/H1 pair passed matched retention: Cd relative -0.0070%, Cl delta +0.00017307.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "2dcafcf18e6d5af863a989ead763056377076692ab781bc3a73fa596d0c5f8b7"
+        },
+        {
+          "artifact_basename": "forces_assessment.json",
+          "sha256": "b0e241566a0e426c36c5e0d99590b00a0cd1c729fce0b18fd8ca9f713c28f681"
+        },
+        {
+          "artifact_basename": "forces_assessment.json",
+          "sha256": "4b1ee65ffbac7daa10b55228c4f16f022c6387754e782326491c0c354d0fad73"
+        }
+      ],
+      "limitations": [
+        "One new H1 mesh and two solver invocations; zero baseline remesh.",
+        "Compact empty cellSet reader stopped helper completion; fixed parser completed existing-mesh diagnostics only.",
+        "Specific saved pair/discretization only: no mesh independence, absolute experimental accuracy, capture-derived vehicle qualification or release."
+      ]
+    }
+  ],
+  "validation_scope": "Synthetic text/array regression tests; optional heavy functions and larger native remesher remain unexecuted. No historical control rerun.",
+  "verification_helpers": [
+    {
+      "file": "tests/test_control_attempts.py",
+      "sha256": "8b79e79c4ac06276a772924ce5e8dc30082997259469b8feb79577ed5448783e",
+      "scope": "Synthetic text/array tests; no captured source reads."
+    }
+  ]
+}
