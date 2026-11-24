@@ -1,0 +1,52 @@
+{
+  "schema": "scan2flow.historical-source-import.v1",
+  "historical_date": "2026-11-07",
+  "import_date": "2026-11-25",
+  "classification": "owned deterministic prototype code; outside production package",
+  "historical_outcome": "All-branch section diagnostic completed; no surface selected, edited or promoted. Exact means analytic intersections of float64 piecewise-linear input, not exact-predicate certification.",
+  "third_party_source_copied": false,
+  "source_artifacts_included": false,
+  "original_code": [
+    {
+      "historical_date": "2026-11-07",
+      "source_id": "exact-sections-20261107",
+      "source_filename": "cut_sections.py",
+      "source_sha256": "118494c6e6ac640a9bc97c103f10a7a58cbd991b617a1c76edfaf40213afba71",
+      "source_symbol_ranges": [
+        {
+          "symbol": "cut_mesh",
+          "start": 38,
+          "end": 172,
+          "sha256": "d1709a354b23d7069a7b4e5aeec5d22e2e83b1fe1989653e40ae30754a858ea0"
+        },
+        {
+          "symbol": "fixtures",
+          "start": 175,
+          "end": 202,
+          "sha256": "061bf53978a6614be835e1ab1d0b86d1e8e35ab6eb15353bdb16c07879059784"
+        }
+      ],
+      "destination": "sections.py",
+      "destination_sha256": "9e689a9ede900cf2630ec3d07f2d58b4a28e447cb12ab90c509d63c59c94660f",
+      "adaptations": [
+        "Retain cut_mesh and synthetic fixtures, with only standalone imports and module documentation added.",
+        "Preserve source vertex/edge identity, every branch, triangle ownership, point tangencies, coplanar triangles, zero-length cuts, junction splitting and independent Trimesh checks.",
+        "Omit real mesh discovery, source protocols, artifact writing, plotting and execution guards.",
+        "Formatting only inside retained numerical bodies."
+      ],
+      "destination_symbol_ranges": [
+        {
+          "symbol": "cut_mesh",
+          "start": 13,
+          "end": 160
+        },
+        {
+          "symbol": "fixtures",
+          "start": 163,
+          "end": 193
+        }
+      ]
+    }
+  ],
+  "validation": "Synthetic tests only; no source geometry, new reconstruction or historical scoring was run."
+}
