@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "scope": "Historical prototype extraction; no production CLI integration.",
+  "snapshot_policy": "Retained available source only. Dates describe experiments, not newly recreated source versions; overwritten or deleted versions are not invented.",
+  "publication_filter": "Code and compact scalar outcomes only. No captured or derived images, camera/mask/pixel artifacts, saved geometry, learned inference, private paths, hostnames or saved per-point arrays.",
+  "files": [
+    {
+      "file": "prior_cdt.cpp",
+      "sha256": "e85799e51cbd9b36af191ad967880e9c3e8f0e9713bf874867af9d0b46efd0ed",
+      "sources": [
+        {
+          "artifact_basename": "prior_cdt.cpp",
+          "sha256": "e85799e51cbd9b36af191ad967880e9c3e8f0e9713bf874867af9d0b46efd0ed",
+          "extracted_symbols_or_sections": "whole authored adapter"
+        }
+      ],
+      "adaptations": [
+        "Unchanged source; separate all-finite-convex-hull semantics retained.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "charts.py",
+      "sha256": "4500ffe6d82b194b81fb9923b3c35c0811e007c085950d89f02b7d216953a20e",
+      "sources": [
+        {
+          "artifact_basename": "prepare_charts.py",
+          "sha256": "41f7df325203c7ed8bdf6133032950da1c20632f3ef41e55926912e9116e4c65",
+          "extracted_symbols_or_sections": "chart validation loop body lines 19-46"
+        },
+        {
+          "artifact_basename": "apply_cap_ownership.py",
+          "sha256": "5f4642ffba2cdb51db0214b06912c0dc71b22a2e8eed6c5eab1ca6c128b57f4c",
+          "extracted_symbols_or_sections": "owned triangle keys and cap conflict test lines 9,18"
+        }
+      ],
+      "adaptations": [
+        "Caller supplies chart definitions instead of the source-specific vertex/face IDs.",
+        "Chart input writes replaced by returned arrays; no geometry construction runs on import.",
+        "Shapely optional import moved into inspect_chart.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "stl_encoding.py",
+      "sha256": "b9ef44cc17dda44daa529ffb543b2605d031a797d8c794dcc5d72ba084ab527e",
+      "sources": [
+        {
+          "artifact_basename": "verify_reader_encoding.py",
+          "sha256": "624ba274545dfb38651c3d5bdaafb0ab6d49772ba9808306c189213ff76f9f34",
+          "extracted_symbols_or_sections": "float32 encoding, bijection, oriented-face and rounding audit lines 7-27"
+        },
+        {
+          "artifact_basename": "verify_prior.py",
+          "sha256": "922de1a3241ee0ea9c80f5610c92cf8d6eda701bf03f8ba15870823b95121f2d",
+          "extracted_symbols_or_sections": "original geometric_key and exact canonical donor-face membership predicate"
+        }
+      ],
+      "adaptations": [
+        "Meshes are explicit arguments.",
+        "Removed writes and the mutation of the earlier failed assessment; returned audit only.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged.",
+        "Excluded history-only claims about reused intersection checks and reruns from returned generic audit."
+      ]
+    }
+  ],
+  "historical_outcomes": [
+    {
+      "id": "h101-damaged-support-stop",
+      "historical_date": "2026-11-05",
+      "outcome": "H1 held at open prior: 196 surviving donor faces, 7 retained caps, 203 partial faces and 61 open edges; five nonplanar walks.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "4fd1e884c0fd04d77548b9a8e71b5b53ad55a71ceca1b28b8990bc34431e2a31"
+        },
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "ecf9435858f9dca3e7cac73a5b6ef507f2e11c32a14433d28b559bb4093a1a2a"
+        },
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "17d8cddb62727fd1ef1a255a7cf40702275258925051d7a92f31f7ae2ac79cb7"
+        }
+      ],
+      "limitations": [
+        "Initial eighth cap reversed an owned isolated donor face. Correction rejected it without new CDT run. No complete H1, VDB or CFD."
+      ]
+    },
+    {
+      "id": "h102-closed-prior-initial-verifier-failure",
+      "historical_date": "2026-11-05",
+      "outcome": "Closed prior construction passed; initial reader bit-equality verifier failed.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "construction.json",
+          "sha256": "dd89a5e42cae0c77c97b41d979f3bfb0f17469ceb56a01e85bff79fec26ef878"
+        },
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "0fbf926d1a42270c72373b1f3fedde814325c079c1f7f6cfe5b440e5ee5b64c3"
+        }
+      ],
+      "limitations": [
+        "124 original vertices, 196 donor faces plus 48 prescribed faces. Minimum quality 0.016285745; prior-only quality diagnostic."
+      ]
+    },
+    {
+      "id": "h103-stl-reader-correction",
+      "historical_date": "2026-11-05",
+      "outcome": "Explicit float32 encoding and oriented donor-face bijection passed; prior sign/topology/intersection gate qualified.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment_reader_reconciled.json",
+          "sha256": "4d1022a89ec121369861720d6670bc2920ac6e8c4a649eb86513a7132861a00c"
+        },
+        {
+          "artifact_basename": "implementation_correction.json",
+          "sha256": "e180952f884d46bfb2f0afad7cff187af16ba40871af567c1602b1a23ac1aa90"
+        }
+      ],
+      "limitations": [
+        "No geometry/intersection rerun and no final H1 quality waiver."
+      ]
+    }
+  ],
+  "validation_scope": "Synthetic text/array regression tests; optional heavy functions and larger native remesher remain unexecuted. No historical control rerun.",
+  "verification_helpers": [
+    {
+      "file": "tests/test_control_attempts.py",
+      "sha256": "8b79e79c4ac06276a772924ce5e8dc30082997259469b8feb79577ed5448783e",
+      "scope": "Synthetic text/array tests; no captured source reads."
+    },
+    {
+      "file": "tests/native/verify_cdt.py",
+      "sha256": "5945e38e9f3c1bd52c0f6a4758b577db036c149933d5de246e3625d66ed29cbc",
+      "scope": "Tiny hand-authored adapter fixtures only; optional explicit native binaries."
+    }
+  ]
+}
