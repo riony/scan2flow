@@ -1,0 +1,119 @@
+{
+  "historical_date": "2026-10-31",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "control_common.py",
+      "sources": [
+        {
+          "source_label": "control_common.py",
+          "original_sha256": "ec02938c992dd38b4381b7d2580e9624729710ee40505419720865d132cb0250"
+        }
+      ],
+      "extracted_symbols": [
+        "save",
+        "write_off",
+        "distance_segments",
+        "surface_locator",
+        "closest"
+      ],
+      "adaptations": [
+        "Removed archive path globals, unused sampling helper/imports. Deferred VTK import; input arrays/meshes supplied by caller.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "dense_legacy.py",
+      "sources": [
+        {
+          "source_label": "dense_adapter.py",
+          "original_sha256": "3755c13d3350a73f9371fd23112aff0504e32b1500f676c16a4c41e92054797b"
+        }
+      ],
+      "extracted_symbols": [
+        "extract",
+        "dense wrap/erosion/protected smoothing body"
+      ],
+      "adaptations": [
+        "Converted command-line/archive inputs into run arguments. Config key renamed to pitch; fixed numerical caps, mask, smoothing and original cache semantics preserved. Optional scikit-image needed for voxel extraction.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "dense_cache_fix_unrun.py",
+      "sources": [
+        {
+          "source_label": "dense_adapter_corrected_UNRUN.py",
+          "original_sha256": "699e8a9be5483f6b7aaf2efe2aa3ed3d2f816b6b1163238b67c2d859e14ce249"
+        }
+      ],
+      "extracted_symbols": [
+        "extract",
+        "dense wrap/erosion/protected smoothing body"
+      ],
+      "adaptations": [
+        "Converted command-line/archive inputs into run arguments. Config key renamed to pitch; fixed numerical caps, mask, smoothing and original cache semantics preserved. Optional scikit-image needed for voxel extraction.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "dense_amended.py",
+      "sources": [
+        {
+          "source_label": "dense_adapter.py",
+          "original_sha256": "959fcdc77540fc5bedb0ab231a584db856aad4a76a3db5a6dacea033ae279f20"
+        }
+      ],
+      "extracted_symbols": [
+        "amended checkpoint extraction",
+        "dense wrap/erosion/protected smoothing body"
+      ],
+      "adaptations": [
+        "Converted command-line/archive inputs into run arguments. Config key renamed to pitch; fixed numerical caps, mask, smoothing and original cache semantics preserved. Optional scikit-image needed for voxel extraction.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "mesh_extract.py",
+      "sources": [
+        {
+          "source_label": "mesh_extract.py",
+          "original_sha256": "d7aa05a68b509b97358ff014157114ad793c49f98168422f8169a8e3d05914bd"
+        }
+      ],
+      "extracted_symbols": [
+        "extract"
+      ],
+      "adaptations": [
+        "Explicit relative import and descriptive local variable; no algorithm changes.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "vdb_adapter.cpp",
+      "sources": [
+        {
+          "source_label": "vdb_adapter.cpp",
+          "original_sha256": "27385a0d243dfc420de2a8b9415491715dbe4700f01812c72105738ce595af57"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    },
+    {
+      "file": "classify_hits.cpp",
+      "sources": [
+        {
+          "source_label": "classify_hits.cpp",
+          "original_sha256": "11399d21cc71c606aea38d396cd0bf31b93d39fc63c9560a5ccbb28a2f87218e"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    }
+  ]
+}
