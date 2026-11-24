@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "scope": "Historical prototype extraction; no production CLI integration.",
+  "snapshot_policy": "Retained available source only. Dates describe experiments, not newly recreated source versions; overwritten or deleted versions are not invented.",
+  "publication_filter": "Code and compact scalar outcomes only. No captured or derived images, camera/mask/pixel artifacts, saved geometry, learned inference, private paths, hostnames or saved per-point arrays.",
+  "files": [
+    {
+      "file": "cdt_patch.cpp",
+      "sha256": "334c983f84c882b9a15e0c602b6b8bbfea22c9cd8dc3852d09efbc8f0ec66c62",
+      "sources": [
+        {
+          "artifact_basename": "cdt_patch.cpp",
+          "sha256": "334c983f84c882b9a15e0c602b6b8bbfea22c9cd8dc3852d09efbc8f0ec66c62",
+          "extracted_symbols_or_sections": "whole authored adapter"
+        }
+      ],
+      "adaptations": [
+        "Unchanged source; no binary or upstream geometry copied.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "metrics.py",
+      "sha256": "2be0de4f83a6b8d55a50b411bfd1c4e91f531363b253b6565e6c6b8c5d467a1d",
+      "sources": [
+        {
+          "artifact_basename": "retriangulate.py",
+          "sha256": "1687ba2eccb2e8c89d4553bba871c2922f6b9cac89d02fba78b0b5b912b689d7",
+          "extracted_symbols_or_sections": "quality, boundary"
+        },
+        {
+          "artifact_basename": "control_common.py",
+          "sha256": "1596534e69539ec605222f3dcc6968c3a07f5704ed098affd24a48db2fb87ccd",
+          "extracted_symbols_or_sections": "distance_segments, sampled_surface, surface_locator, closest"
+        },
+        {
+          "artifact_basename": "evaluate_full.py",
+          "sha256": "56e75bce58b3d76e4dcae2701a712923069216b8f459f6d3261f5282f1812cfe",
+          "extracted_symbols_or_sections": "surface_samples, stats, feature_metrics, component_count"
+        }
+      ],
+      "adaptations": [
+        "Removed archive roots and wildcard imports.",
+        "VTK and SciPy imports are local to functions that require them.",
+        "Numerical function bodies retained.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "checks.py",
+      "sha256": "9fe999af913f59d110a4a29b5e415ccf7a33fb0a692074c1744fbc51eb829018",
+      "sources": [
+        {
+          "artifact_basename": "proof_job_round2.py",
+          "sha256": "8feb873f7c5b09509f63fffde00ed3b411d2b5fa04a1674a13bbf68665bfac16",
+          "extracted_symbols_or_sections": "topology; shared seam audit lines 71-78"
+        },
+        {
+          "artifact_basename": "evaluate_full.py",
+          "sha256": "56e75bce58b3d76e4dcae2701a712923069216b8f459f6d3261f5282f1812cfe",
+          "extracted_symbols_or_sections": "check_stage structural and exact-contact reconciliation predicates"
+        },
+        {
+          "artifact_basename": "full_job.py",
+          "sha256": "37cff6f70708ccc8a952c62207cdf5fa28521307e2d3013cd09af58d78b76527",
+          "extracted_symbols_or_sections": "full locked-graph opposite-incidence/distinct-patch checks lines 34-47"
+        }
+      ],
+      "adaptations": [
+        "Global vertex array became explicit argument.",
+        "Seam and evidence predicates became functions returning data; removed all subprocess, saved-input and output operations.",
+        "Full locked-graph helper takes patch IDs and original faces explicitly; no unmeasured zero-displacement or Euler claims are returned.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    },
+    {
+      "file": "synthetic_fixtures.json",
+      "sha256": "ef9657551fe50941c181e229df7129d6a61f4265be9b3baa370d6d07d85d0797",
+      "sources": [
+        {
+          "artifact_basename": "test_adapter.py",
+          "sha256": "b14e66bb701001e30d0140214003264673ad3f980be8561f715141ab988247e3",
+          "extracted_symbols_or_sections": "four synthetic fixture inputs"
+        }
+      ],
+      "adaptations": [
+        "Only hand-authored generic coordinate lists and expectations retained; removed test execution and output paths.",
+        "Python formatting/import hygiene only after extraction; native C++ text is unchanged."
+      ]
+    }
+  ],
+  "historical_outcomes": [
+    {
+      "id": "cg01-proof-verifier-stop",
+      "historical_date": "2026-11-05",
+      "outcome": "First verifier stopped after patch0 triangulation because Trimesh.split attempted hole repair and required missing networkx.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "proof_job.py",
+          "sha256": "febfc9c02de84bb8e351017c2df012cd225a136ca76d7c67e40d751cf612b0ab"
+        },
+        {
+          "artifact_basename": "proof_job_round2.py",
+          "sha256": "8feb873f7c5b09509f63fffde00ed3b411d2b5fa04a1674a13bbf68665bfac16"
+        },
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "1643333316425fd34f944707f0b337bf1d94de321c6b0a30edfe2e30985fd330"
+        }
+      ],
+      "limitations": [
+        "Original verifier remains source evidence; do not call round1 a passed proof."
+      ]
+    },
+    {
+      "id": "cg02-patch-seam-proof",
+      "historical_date": "2026-11-05",
+      "outcome": "Round2 proof passed: 512 seam segments/513 vertices, unchanged coordinates; quality minimum 0.087988657 and zero <=0.05 faces.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "920702f63164274883aca8cd59003a4f0b91ac4de4a2e742d582197aa941d1a8"
+        },
+        {
+          "artifact_basename": "seam_audit.json",
+          "sha256": "962b802041c61260a782bb91d43199000272b1ca99ea160493b118ae0b65f71b"
+        }
+      ],
+      "limitations": [
+        "Only a saved synthetic open patch pair. Original closed-body parser remains false. Not full H0/H1 or CFD."
+      ]
+    },
+    {
+      "id": "cg03-full-h0",
+      "historical_date": "2026-11-05",
+      "outcome": "Full saved H0 carrier/hybrid qualified; 7 patches, 2,688 locked segments, 338,118 faces; all original coordinates retained.",
+      "primary_evidence": [
+        {
+          "artifact_basename": "assessment.json",
+          "sha256": "18be406a43c1119947c17c253e4c7a9807060d7fdffc1171a07fb08194d54c52"
+        },
+        {
+          "artifact_basename": "seam_audit.json",
+          "sha256": "feee6ce134d2e85683b806e008849ddd55a3cf3000df5bb1922d75e1831475e8"
+        }
+      ],
+      "limitations": [
+        "No damaged-input topology construction or aerodynamic validation."
+      ]
+    }
+  ],
+  "validation_scope": "Synthetic text/array regression tests; optional heavy functions and larger native remesher remain unexecuted. No historical control rerun.",
+  "verification_helpers": [
+    {
+      "file": "tests/test_control_attempts.py",
+      "sha256": "8b79e79c4ac06276a772924ce5e8dc30082997259469b8feb79577ed5448783e",
+      "scope": "Synthetic text/array tests; no captured source reads."
+    },
+    {
+      "file": "tests/native/verify_cdt.py",
+      "sha256": "5945e38e9f3c1bd52c0f6a4758b577db036c149933d5de246e3625d66ed29cbc",
+      "scope": "Tiny hand-authored adapter fixtures only; optional explicit native binaries."
+    }
+  ]
+}
