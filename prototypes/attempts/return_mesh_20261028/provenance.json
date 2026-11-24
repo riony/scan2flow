@@ -1,0 +1,70 @@
+{
+  "historical_date": "2026-10-28",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "split_intersections.cpp",
+      "sources": [
+        {
+          "source_label": "split_intersections.cpp",
+          "original_sha256": "e2e6853f6c0e5941352340c71878494aaa62196ec95c0aaf2e97e5de9bf9d562"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    },
+    {
+      "file": "check_exact.cpp",
+      "sources": [
+        {
+          "source_label": "check_exact.cpp",
+          "original_sha256": "8b113bfec6fcaa43607423fe616711a354315ba0674f92fc2c364e75e3efec15"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    },
+    {
+      "file": "topology.py",
+      "sources": [
+        {
+          "source_label": "split_vertex_fans.py",
+          "original_sha256": "63d6f8de2000a449baaae047001844b98de28fb5c944a9dbe19dbc69ab170288"
+        },
+        {
+          "source_label": "close_numeric_cracks.py",
+          "original_sha256": "077fcc8579f62bd505464cfc5b705a3bbb948c13ebfbf9537d9938424a51fbe1"
+        }
+      ],
+      "extracted_symbols": [
+        "vertex fan graph/splitting",
+        "bounded triangular numerical crack caps"
+      ],
+      "adaptations": [
+        "Array arguments/returns replace saved mesh reads/writes. Empty cap list returns unchanged arrays instead of original vstack shape error. No geometry changes to nonempty algorithm.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "winding.py",
+      "sources": [
+        {
+          "source_label": "select_exterior.py",
+          "original_sha256": "a123d758403bec5668c30b05a5aa6e64948ddd5c58f9ea2997a4ee930f5a3210"
+        }
+      ],
+      "extracted_symbols": [
+        "winding",
+        "two-largest-face patch voting"
+      ],
+      "adaptations": [
+        "Reference triangles and patch data are explicit inputs; cut graph construction, stitching, source attribution and export are not reproduced.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    }
+  ]
+}
