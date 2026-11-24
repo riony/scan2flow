@@ -1,0 +1,116 @@
+{
+  "schema": "scan2flow.historical-source-import.v1",
+  "historical_date": "2026-11-17",
+  "import_date": "2026-11-25",
+  "classification": "owned deterministic prototype code; outside production package",
+  "historical_outcome": "Neither compared interpolant promoted. One withheld strip exposed an oscillatory baseline and the saved-coefficient audit diagnosed severe penalty under-integration.",
+  "third_party_source_copied": false,
+  "source_artifacts_included": false,
+  "original_code": [
+    {
+      "historical_date": "2026-11-17",
+      "source_id": "strip-withholding-20261117",
+      "source_filename": "compare.py",
+      "source_sha256": "36e7c8ab0f920e2fd7e837d60fa1a84211730646cef29c5c3bb39656fc7d8c46",
+      "source_symbol_ranges": [
+        {
+          "symbol": "design",
+          "start": 36,
+          "end": 41,
+          "sha256": "2a3364eac2154dad22b2f21ea82b0045e472f3d6e5f7edd0a77e9dd59c665975"
+        },
+        {
+          "symbol": "penalty",
+          "start": 43,
+          "end": 47,
+          "sha256": "d54ecf14f73d2b5378acbaebab6965a0b7aa7c170f92df008c89096cc42e6cef"
+        },
+        {
+          "symbol": "fit",
+          "start": 49,
+          "end": 62,
+          "sha256": "d5859ccebb9afce5672c4524418eb0baa39f6aa6fb06dc1dc507c3ce015f3b98"
+        },
+        {
+          "symbol": "folds_from_xy",
+          "start": 64,
+          "end": 82,
+          "sha256": "119d4aaf019df625cc4c1759eb666ee02b4a35479235639cb53c9adff6ed20ad"
+        },
+        {
+          "symbol": "make_grid",
+          "start": 84,
+          "end": 93,
+          "sha256": "ea02becb97a24b7706f771eb42b07bb56e97f890195a58b9608da132daea223b"
+        }
+      ],
+      "destination": "fit.py",
+      "destination_sha256": "d7176fd90f5d8bdd291f929173627cd142d8b9801eda313ad554de0add2a8cf7",
+      "adaptations": [
+        "Retain supplied-chart design, historical sampled penalty, retained-height fitting, XY-only strip definitions/bracketing, and convex-hull scaffold triangulation.",
+        "Move global lambda 1e-5 to an explicit fit argument with unchanged default. Keep caller-supplied normal/constraint rows; no observation lookup is imported.",
+        "Omit source paths, capture identifiers, observation arrays, camera projection, raycasting, normal inference, scoring, reports and run orchestration.",
+        "Preserve four Huber iterations, ridge 1e-10 and the known under-integrated 45 by 35 sampled objective.",
+        "Formatting only otherwise."
+      ],
+      "destination_symbol_ranges": [
+        {
+          "symbol": "design",
+          "start": 13,
+          "end": 19
+        },
+        {
+          "symbol": "penalty",
+          "start": 22,
+          "end": 28
+        },
+        {
+          "symbol": "fit",
+          "start": 31,
+          "end": 49
+        },
+        {
+          "symbol": "folds_from_xy",
+          "start": 52,
+          "end": 89
+        },
+        {
+          "symbol": "make_grid",
+          "start": 92,
+          "end": 105
+        }
+      ]
+    },
+    {
+      "historical_date": "2026-11-17",
+      "source_id": "saved-penalty-audit-20261117",
+      "source_filename": "audit_saved_penalty.py",
+      "source_sha256": "e01e015ff1f3182ebf35a2d3218fb4deb083545b0fc68d445bf053a3ceae21c4",
+      "source_symbol_ranges": [
+        {
+          "symbol": "audit_energies_from_main",
+          "start": 18,
+          "end": 38,
+          "sha256": "b9742f6eae4545cb023b88038564d78b0ad07e6805ad9edc9273c685ea910bd1"
+        }
+      ],
+      "destination": "penalty_audit.py",
+      "destination_sha256": "158d4afbf0f4a73eab0a542437375e30106e573de55b7668bac4ae4199f3fb1c",
+      "adaptations": [
+        "Replace saved-file discovery with explicit chart and supplied coefficient vector or matrix arguments.",
+        "Retain four Gauss-Legendre sites per distinct knot span, tensor weights, physical derivative scaling and chart-area-normalized division by three.",
+        "Return raw sampled/integrated energy arrays and empty-span diagnostics; omit file writes, candidate names and energy ratio presentation.",
+        "No corrected penalty matrix, fit, optimizer, selection or scored result is implemented.",
+        "Formatting and variable names changed; numerical energy equations retained."
+      ],
+      "destination_symbol_ranges": [
+        {
+          "symbol": "audit_energies",
+          "start": 13,
+          "end": 56
+        }
+      ]
+    }
+  ],
+  "validation": "Synthetic tests only; no source geometry, new reconstruction or historical scoring was run."
+}
