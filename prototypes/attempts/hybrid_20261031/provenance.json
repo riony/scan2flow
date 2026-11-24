@@ -1,0 +1,37 @@
+{
+  "historical_date": "2026-10-31",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "remesh_carrier.cpp",
+      "sources": [
+        {
+          "source_label": "remesh_carrier.cpp",
+          "original_sha256": "448bce4b45b54eab1de6228025c1086a2ba854f5669ae5135fdf9d5f3babe960"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    },
+    {
+      "file": "transfer.py",
+      "sources": [
+        {
+          "source_label": "candidate_job.py",
+          "original_sha256": "76b2aab780d81be478d4cca6f719d813fdcb329c1279265b0376c6bf1b586919"
+        }
+      ],
+      "extracted_symbols": [
+        "fixed feature-distance mask",
+        "smoothstep donor transfer",
+        "per-face processing provenance"
+      ],
+      "adaptations": [
+        "Explicit meshes/feature segments and optional stressed vertices replace archive inputs and synthetic body-coordinate stress. Removed native launcher, evaluator and export. Does not create or qualify carrier.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    }
+  ]
+}
