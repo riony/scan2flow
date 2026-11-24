@@ -1,0 +1,64 @@
+{
+  "historical_date": "2026-10-29",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "interface_sampling.py",
+      "sources": [
+        {
+          "source_label": "audit_interfaces.py",
+          "original_sha256": "dbe37888b90fc6701cd29d421eb3c35dfbbf5f917606fddb10bb8f5028924c5c"
+        }
+      ],
+      "extracted_symbols": [
+        "UnsignedDistance",
+        "values",
+        "stats",
+        "arc_sample"
+      ],
+      "adaptations": [
+        "Extracted helpers only; removed named curves, ownership/source records, geometry/plot exports and archive paths. Optional VTK/PyVista imports deferred.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "trim_prescribed.py",
+      "sources": [
+        {
+          "source_label": "trim_drafts.py",
+          "original_sha256": "7c240cdb35a2f3f1b88746c8fbe49c3785e74bea3b468d68af3dc26aa72bb766"
+        }
+      ],
+      "extracted_symbols": [
+        "area-weighted outward-direction cutters",
+        "non-destructive Boolean trim"
+      ],
+      "adaptations": [
+        "Caller supplies faces, tessellation mappings and draft; removed specimen names, saved CAD and exports. Original extrusion length retained as explicit parameter/default.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    },
+    {
+      "file": "transitions.py",
+      "sources": [
+        {
+          "source_label": "build_parameter_matched.py",
+          "original_sha256": "56d63211ae768c322dfa83e0330974297c492814a078aa7b3463756d97fef360"
+        },
+        {
+          "source_label": "build_tangent_initial.py",
+          "original_sha256": "84d2ee14628c6fff2136301299b6b1b4cab9b8cbbfd166997cdbda3a080f258e"
+        }
+      ],
+      "extracted_symbols": [
+        "smoothstep endpoint correction",
+        "parameter-matched interpolated ruled face",
+        "G1 fill"
+      ],
+      "adaptations": [
+        "Caller supplies prescribed targets/edges/support. Removed all body-coordinate target rules, family-name filters, output and sewing orchestration.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    }
+  ]
+}
