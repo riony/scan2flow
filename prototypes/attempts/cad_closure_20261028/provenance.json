@@ -1,0 +1,94 @@
+{
+  "historical_date": "2026-10-26 protocol; construction/corrections 2026-10-28",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "cad_common.py",
+      "sources": [
+        {
+          "source_label": "cad_common.py",
+          "original_sha256": "483a5e9e7a5a690e577ce328500704c317d2b12232a073ca46efaf560f6b3c21"
+        },
+        {
+          "source_label": "named_joins.py",
+          "original_sha256": "4f2d338cf2b445bf82d983209ff984ee54e0e05043bb734e05e3056c6ee43b23"
+        }
+      ],
+      "extracted_symbols": [
+        "items",
+        "free_edges",
+        "sample",
+        "mirror transform",
+        "sew/solid completion"
+      ],
+      "adaptations": [
+        "Removed archive-loading globals and mesh/data exports. OCP imports deferred; shapes supplied by caller.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ],
+      "sha256": "9930caab064a8dc3dd8d25f9c1b53735dd672ac36da64f00e4bd5727afada35b"
+    },
+    {
+      "file": "closures.py",
+      "sources": [
+        {
+          "source_label": "assembly_candidate.py",
+          "original_sha256": "b9f27ab392fd3fc2d859f85b16df4e703d7849d5b8752aea803f3a09b5cdf37d"
+        },
+        {
+          "source_label": "clip_test.py",
+          "original_sha256": "82ebc871f262c4da6641972ec16fa15931558a0d700f79de6d1cb5929002c073"
+        },
+        {
+          "source_label": "named_joins_unoriented_diagnostic.py",
+          "original_sha256": "9e35906bf95337cf1887daf36965ef0f55c2a5e09e035a5d46a53b640a2323d9"
+        },
+        {
+          "source_label": "named_joins.py",
+          "original_sha256": "4f2d338cf2b445bf82d983209ff984ee54e0e05043bb734e05e3056c6ee43b23"
+        },
+        {
+          "source_label": "partition_closure.py",
+          "original_sha256": "e35ef6fa3d355765612da2d1165b04a817ac05c86043502652a819f2ace6a743"
+        }
+      ],
+      "extracted_symbols": [
+        "free-boundary reflection bridge",
+        "centreline clipping",
+        "legacy/oriented partner joins",
+        "volume partition",
+        "initial one-shell assertion and unconditional solid/orientation"
+      ],
+      "adaptations": [
+        "Removed transforms from saved data, boundary-name assignment, paths, exports and reports. Caller supplies shape/bounds. Shared exact branch isolates orientation correction.",
+        "Formatted Python and sorted imports; removed unused imports only.",
+        "Initial bridge retains its strict one-shell assertion and unconditional solid construction separately from the later conditional clipped/named completion."
+      ],
+      "sha256": "e0be431f7d6951bff807805d6c6c00966e3f7c85487314a240dded3ddfe091c2"
+    },
+    {
+      "file": "retrim_uv_chord.py",
+      "sources": [
+        {
+          "source_label": "retrim_extent_edges.py",
+          "original_sha256": "1558b15281263fd7d98943cf3d95bd586d744dd54b2978b4fb797103c4839738"
+        }
+      ],
+      "extracted_symbols": [
+        "segment",
+        "UV trim replacement and sewing"
+      ],
+      "adaptations": [
+        "Caller enumerates edges/faces; removed specimen-name filter and archive audit/export. Numerical curve construction preserved.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ],
+      "sha256": "612a25a8f6c31adc93752b8e35eecbe3f170609db1b0e775cc09394cf5f91c6c"
+    }
+  ],
+  "verification_helpers": [
+    {
+      "file": "tests/test_cad_attempts.py",
+      "sha256": "b78656dc1ec4dc10552b3a7cd12b431c82b9cb1a41a8bb7c02c7decbefcd40e9",
+      "scope": "Tiny synthetic arrays and mocked CAD control flow only; no OCP execution or historical geometry."
+    }
+  ]
+}
