@@ -1,0 +1,75 @@
+{
+  "historical_date": "2026-10-28",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "compact_step.py",
+      "sources": [
+        {
+          "source_label": "compact_step.py",
+          "original_sha256": "665098aec7ef4ee2971981310d338c68dfea8250c1471d24a84dc11b46b27a50"
+        }
+      ],
+      "extracted_symbols": [
+        "real",
+        "write_step"
+      ],
+      "adaptations": [
+        "Neutralized author/project metadata. Historical timestamp, exact .17g encoding, exchange units and numeric operations retained.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ],
+      "sha256": "959d9eb4ae3920fa9302d82923aa75e800f7f94292969088de97f590858571f4"
+    },
+    {
+      "file": "verify_facets.py",
+      "sources": [
+        {
+          "source_label": "verify_orientation_preserving.py",
+          "original_sha256": "17eb89bc5a30c498ed22a674d850fbacdf65db3490e05f26a1ab918cbc73f7d5"
+        }
+      ],
+      "extracted_symbols": [
+        "reader shape-fix override",
+        "topology/volume checks",
+        "all-facet corner/area/normal checks",
+        "bijective face mapping"
+      ],
+      "adaptations": [
+        "Caller supplies STEP, default-reader fixture and reference mesh. Removed archived hash, binary cache, renames, progress/files/host concurrency and source data. Preserved original tolerances and 54-parameter expectation.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ],
+      "sha256": "8e742c3cae6af7f0316739c5f34cef8984619f268149f505a8299201056672f7"
+    },
+    {
+      "file": "orientation_control.py",
+      "sources": [
+        {
+          "source_label": "test_orientation_guard.py",
+          "original_sha256": "98d76cb9c4e81a98bc551b6ee2f86cb041f1e0c6980b9da4d6d3cb7d9e9f09f6"
+        },
+        {
+          "source_label": "smoke_compact.py",
+          "original_sha256": "a5a626d8d8ae11b980d4ff029af9c7ff98ac8df2921776a112afb62f213c1b9c"
+        }
+      ],
+      "extracted_symbols": [
+        "icosphere fixture",
+        "single FACE_SURFACE inversion",
+        "orientation guard",
+        "independent normal mismatch count including invalid B-rep"
+      ],
+      "adaptations": [
+        "Caller supplies new output directory. Original centroid-matched face-normal check and explicit normal_mismatches > 0 guard retained; reader/transfer/default-map/check exceptions propagate.",
+        "Formatted Python and sorted imports; removed unused imports only."
+      ],
+      "sha256": "8ac7b614ad3e54686fa69f857ae729017168eb323702d38ae09f9620a8a5ce7f"
+    }
+  ],
+  "verification_helpers": [
+    {
+      "file": "tests/test_cad_attempts.py",
+      "sha256": "b78656dc1ec4dc10552b3a7cd12b431c82b9cb1a41a8bb7c02c7decbefcd40e9",
+      "scope": "Tiny synthetic arrays and mocked CAD control flow only; no OCP execution or historical geometry."
+    }
+  ]
+}
