@@ -1,0 +1,21 @@
+{
+  "historical_date": "2026-10-31",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "retriangulate.py",
+      "sources": [
+        {
+          "source_label": "retriangulate.py",
+          "original_sha256": "1687ba2eccb2e8c89d4553bba871c2922f6b9cac89d02fba78b0b5b912b689d7"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": [
+        "Formatted Python and sorted imports; removed unused imports only."
+      ]
+    }
+  ]
+}
