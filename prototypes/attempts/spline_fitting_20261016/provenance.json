@@ -1,0 +1,114 @@
+{
+  "schema": "scan2flow.historical-source-import.v1",
+  "historical_date": "2026-10-16",
+  "import_date": "2026-11-25",
+  "classification": "owned deterministic prototype code; outside production package",
+  "historical_outcome": "Useful smooth open-patch candidate; not accepted for body expansion or CFD. The data-extent boundary check was later retired as an interior-curvature gate.",
+  "third_party_source_copied": false,
+  "source_artifacts_included": false,
+  "original_code": [
+    {
+      "historical_date": "2026-10-16",
+      "source_id": "uniform-spline-20261016",
+      "source_filename": "fit_surface.py",
+      "source_sha256": "4c6683456f0e3d1490c0375f70ca3ea19530f4fcf34cca3409a4739c32aa491a",
+      "source_symbol_ranges": [
+        {
+          "symbol": "spatial_medians",
+          "start": 25,
+          "end": 27,
+          "sha256": "f627d098566055dca9668d5427a505fd0270d7ac8e578f0c00aeeec4a953cf81"
+        },
+        {
+          "symbol": "knots",
+          "start": 31,
+          "end": 31,
+          "sha256": "fc0a5b0aad1f61e6fd396398e7e35852bde81e064536eb38d35813d40fdd3f27"
+        },
+        {
+          "symbol": "design",
+          "start": 32,
+          "end": 34,
+          "sha256": "8f6ddab30ced87b67136eac6fea6741e0ecff2ecaeb90c49c470d0dc6179583b"
+        },
+        {
+          "symbol": "penalty_rows_grid",
+          "start": 35,
+          "end": 35,
+          "sha256": "ad5de9d9a36d82a5bf2f61715a2161029107fdb796d9198fd60ac3d433cabc6a"
+        },
+        {
+          "symbol": "penalty_rows_hessian",
+          "start": 45,
+          "end": 45,
+          "sha256": "77197740db8e54d727820d849cb7f0d98eff4b190ced80e4646e3f4a98a14c2f"
+        },
+        {
+          "symbol": "spatial_folds",
+          "start": 36,
+          "end": 36,
+          "sha256": "4ee9f758fb9f77571274691df0894d90162119ba7403850c9ebf3bfc3c8415f0"
+        },
+        {
+          "symbol": "solve",
+          "start": 38,
+          "end": 43,
+          "sha256": "47b29911577eeb771773fb2ba718abed3763931e750654dbee39a745044d94ad"
+        },
+        {
+          "symbol": "select_candidate",
+          "start": 51,
+          "end": 54,
+          "sha256": "07cd1557a3006ac164d15a6c336c6f15bd27e1a92a81884f67b86561764ca644"
+        }
+      ],
+      "destination": "fit.py",
+      "destination_sha256": "1f3a205909298acd76db2eefcd6355a874b2b4a42f577bb8ee1e811b31af737e",
+      "adaptations": [
+        "Extract functions with explicit caller-supplied chart points, chart scale, cell origin and smoothing.",
+        "Expose cell width and minimum count as arguments retaining historical defaults 0.055 and 3.",
+        "Retain uniform cubic knots, 25 by 20 Hessian sites, stacked-row normalization, four Huber iterations, noise floor 0.006, ridge 1e-9 and 10 percent model-selection tolerance.",
+        "Omit cloud/color loading, segmentation, chart discovery, candidate-search execution, trim generation, exports, reports and all source arrays.",
+        "Formatting and descriptive names changed; numerical equations retained."
+      ],
+      "destination_symbol_ranges": [
+        {
+          "symbol": "spatial_medians",
+          "start": 12,
+          "end": 20
+        },
+        {
+          "symbol": "knots",
+          "start": 23,
+          "end": 24
+        },
+        {
+          "symbol": "design",
+          "start": 27,
+          "end": 30
+        },
+        {
+          "symbol": "penalty_rows",
+          "start": 33,
+          "end": 42
+        },
+        {
+          "symbol": "spatial_folds",
+          "start": 45,
+          "end": 46
+        },
+        {
+          "symbol": "solve",
+          "start": 49,
+          "end": 60
+        },
+        {
+          "symbol": "select_candidate",
+          "start": 63,
+          "end": 69
+        }
+      ]
+    }
+  ],
+  "validation": "Synthetic tests only; no source geometry, new reconstruction or historical scoring was run."
+}
