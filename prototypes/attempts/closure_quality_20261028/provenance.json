@@ -1,0 +1,32 @@
+{
+  "historical_date": "2026-10-28",
+  "status": "retrospective source extraction; not independently requalified",
+  "files": [
+    {
+      "file": "wrap.cpp",
+      "sources": [
+        {
+          "source_label": "wrap.cpp",
+          "original_sha256": "a788b6e533a1906c1e36fc5abc93cc19aaac587e79ee2f161ec49f20d405eb62"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    },
+    {
+      "file": "fine_wrap.cpp",
+      "sources": [
+        {
+          "source_label": "fine_wrap.cpp",
+          "original_sha256": "7d7cd1c407fb74aca798036c2c0ce7547a164fe9d1c18cd51e8d51f3beba20d4"
+        }
+      ],
+      "extracted_symbols": [
+        "entire numerical source"
+      ],
+      "adaptations": []
+    }
+  ]
+}
