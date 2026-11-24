@@ -1,0 +1,103 @@
+{
+  "schema": "scan2flow.historical-source-import.v1",
+  "historical_date": "2026-10-17",
+  "import_date": "2026-11-25",
+  "classification": "owned deterministic prototype code; outside production package",
+  "historical_outcome": "Nonuniform interior candidate carried forward for reference fidelity. Unsupported curvature remained unvalidated; subsequent withholding exposed a sampled-penalty failure.",
+  "third_party_source_copied": false,
+  "source_artifacts_included": false,
+  "original_code": [
+    {
+      "historical_date": "2026-10-17",
+      "source_id": "nonuniform-spline-20261017",
+      "source_filename": "refit.py",
+      "source_sha256": "0bfe3f219e43711698d4616e3baf7ff400a41951205f45de4918ae85944433ce",
+      "source_symbol_ranges": [
+        {
+          "symbol": "spatial_folds",
+          "start": 18,
+          "end": 18,
+          "sha256": "4ace4e5173b556090d35e95ddbc86b19aed5bd969616ab2df6e95d81bc114ffd"
+        },
+        {
+          "symbol": "knots",
+          "start": 20,
+          "end": 21,
+          "sha256": "b7e84fcd04fe0f049bf7f8711b44215ae1a7730b186cd5e118b475aba95bec46"
+        },
+        {
+          "symbol": "design",
+          "start": 22,
+          "end": 23,
+          "sha256": "0d5ff0095ab9e2b05efa745d66ee893b796266e4d738de48b664554957930a40"
+        },
+        {
+          "symbol": "sampled_penalty_grid",
+          "start": 24,
+          "end": 24,
+          "sha256": "67978f77dcede63f2f60d006945dba48065f65bdace79b25074eb00eb21decc3"
+        },
+        {
+          "symbol": "solve",
+          "start": 26,
+          "end": 30,
+          "sha256": "54eb44585131b97db6d6bfb772844c2a972f8ef2efb0a81de63255132658286d"
+        },
+        {
+          "symbol": "sampled_penalty_hessian",
+          "start": 36,
+          "end": 36,
+          "sha256": "3b749011337c7fbe73949e10d9f617ef1f24fb1b6ca0cb67e9f7bb8c2bb98ce1"
+        },
+        {
+          "symbol": "select_candidate",
+          "start": 43,
+          "end": 43,
+          "sha256": "996d9da5bb918b428a49ab5ffe24b35e39bd72812b825a320fdb49801278d6f3"
+        }
+      ],
+      "destination": "fit.py",
+      "destination_sha256": "0edd7535b3559d27a316826450f9c7ad6ab2de7fa9a699b36dedbe808fb35a30",
+      "adaptations": [
+        "Make feature center, chart range and supplied normalized coordinates explicit arguments.",
+        "Retain 5001-site CDF inversion, 65 percent uniform plus 35 percent Gaussian density, width 0.55 chart units, 45 by 35 Hessian sampling, four Huber iterations and ridge 1e-10.",
+        "Omit captured anchors, alternate fusion input, fixed candidate-search execution, caches, physical boundary data and exports.",
+        "Preserve the historical under-integrated sampled objective; do not substitute exact quadrature.",
+        "Formatting and descriptive names changed; numerical equations retained."
+      ],
+      "destination_symbol_ranges": [
+        {
+          "symbol": "knots",
+          "start": 13,
+          "end": 22
+        },
+        {
+          "symbol": "design",
+          "start": 25,
+          "end": 28
+        },
+        {
+          "symbol": "sampled_penalty",
+          "start": 31,
+          "end": 41
+        },
+        {
+          "symbol": "spatial_folds",
+          "start": 44,
+          "end": 46
+        },
+        {
+          "symbol": "solve",
+          "start": 49,
+          "end": 57
+        },
+        {
+          "symbol": "select_candidate",
+          "start": 60,
+          "end": 66
+        }
+      ]
+    }
+  ],
+  "validation": "Synthetic tests only; no source geometry, new reconstruction or historical scoring was run."
+}
