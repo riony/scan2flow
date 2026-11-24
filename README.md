@@ -27,12 +27,20 @@ No footage, textures or bystander imagery is included. The numeric geometry rema
 ## Layout and current limits
 
 - `src/scan2flow/`: inspection CLI and empty geometry/OpenFOAM namespaces.
-- `prototypes/`: complete deterministic pipeline prototypes and research recipes; migration and validation remain unfinished.
+- `prototypes/`: legacy pipeline modules and selected historical geometry kernels; migration and validation remain unfinished.
 - `fixtures/`: one decimated open shell and one noisy support patch.
 - `tests/`: CLI/read-only and basic topology checks.
 - `ROADMAP.md`: bounded engineering milestones, including provenance and acceptance gates.
 
 This is a separate repository built from copies. Its setup does not move or rewrite the source evidence archive. Prototype functions are not automatically executed by the CLI. No solver is launched during installation or tests.
+
+The [attempt history](prototypes/attempts/README.md) follows the retained work from
+16 October through 17 November 2026, imported in smaller commits on 25 November.
+Failed closure, wrap and triangulation variants remain explicitly labelled under
+`prototypes/`. Later fixes do not erase their outcomes. These are selected code
+extractions with synthetic tests, not complete experiment replays or a claim that
+the missing geometry has been recovered. The inspection implementation and the
+two existing geometry fixtures are unchanged by this history update.
 
 ## Licence and verification
 
@@ -41,3 +49,8 @@ The code and included geometry fixtures are provided under the [MIT licence](LIC
 The project was renamed from `scan2foam` to `scan2flow` on 28 October 2026. Use the `scan2flow` CLI, `scan2flow` Python imports and `SCAN2FLOW_OF_BASHRC` for optional solver prototypes. Existing installations should be reinstalled with the commands above; no legacy command or environment-variable alias is provided.
 
 See `verification.json` for the original pre-rename installation, tests, lint and repository audit, and `rename_verification.json` for the rename checks. The original record retains the former package name and publication state as historical evidence. These checks certify the inspection package and source hygiene, not the optional solver/CAD recipes or physical geometry. Publication and recorded sessions are separate actions; no platform eligibility, pay rate or contract terms are asserted here.
+
+`history_verification.json` records the 25 November retrospective imports: 51
+Python tests passed, one optional test skipped, and six native CDT synthetic
+fixtures passed. Optional CAD, VTK, OpenVDB and larger native recipes remain
+unqualified; the inspection-only product scope is unchanged.

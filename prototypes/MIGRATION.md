@@ -18,3 +18,31 @@ Changes made during copying:
 Before migrating a recipe into `src/scan2flow`, give it a documented generic input contract, safe output handling and geometric tests. CAD binding compatibility, end-to-end solver execution, source-scale correctness, physical fidelity and closed-car production are not certified by a passing inspection test suite.
 
 On 28 October 2026, the project namespace and configuration prefix were renamed to `scan2flow` and `SCAN2FLOW`. This changes imports, console commands, diagnostic branding and the optional solver environment variable; numerical calculations and fixture bytes are unchanged. The source manifest retains the original copy hashes.
+
+## Retrospective imports, 25 November 2026
+
+The new `attempts/` groups are selected kernels from retained code snapshots.
+Historical work dates belong in directory names, documentation and commit
+messages; the new commits use their actual creation time. The existing rename
+commit remains first in the post-scaffold history.
+
+Archive discovery, fixed source paths, saved observations, specimen coordinates,
+rendering/report drivers, runtime installers and experiment launchers were
+removed. Geometry and output locations are caller inputs. Optional heavy imports
+are deferred where needed to keep inspection installation independent. Per-group
+`provenance.json` records original code hashes, extracted symbols and adaptations;
+it does not include private paths or source geometry. These extractions cannot
+replay the historical work without omitted inputs and orchestration.
+
+Original numerical operations and failed variants are retained as documented.
+In particular, the cached voxel-transform defect, unconstrained-Delaunay boundary
+failure and under-resolved spline penalty are not silently repaired in their
+historical modules. The later constrained adapters and the coefficient-only
+integration audit are separate entries. Synthetic regressions added during this
+import are present-day software checks, not backdated scientific results.
+
+The CAD/native libraries retain their own licences and are not vendored. New
+tests use analytic geometry and synthetic logs only. No new footage-derived
+mesh, boundary array, calibration, image, mask, depth, normal or model asset is
+included. The original two fixture bytes and production inspection source remain
+unchanged. Qualification of optional heavy recipes remains explicitly limited.

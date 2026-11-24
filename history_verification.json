@@ -1,0 +1,58 @@
+{
+  "verification_date": "2026-11-25",
+  "historical_source_work": "2026-10-16 through 2026-11-17",
+  "base_commit": "7bd1c06332828c36e2e4f4ef687954f990fbe588",
+  "commit_dates": "Actual creation timestamps; original-work dates appear in subjects and directory names. Existing rename commit retained.",
+  "scope": "Retrospective deterministic prototype extractions, current synthetic software verification, no reconstruction or historical experiment replay.",
+  "environment": "Fresh isolated venv, no borrowed site-packages",
+  "python": "3.14.4",
+  "versions": {
+    "scan2flow": "0.1.0",
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "trimesh": "5.2.2",
+    "pytest": "9.2.0",
+    "ruff": "0.17.6"
+  },
+  "checks": {
+    "pytest": {
+      "passed": 51,
+      "skipped": 1,
+      "subtests_passed": 26,
+      "skip_reason": "Optional Shapely chart-area path not installed"
+    },
+    "ruff": "passed",
+    "pip_check": "passed",
+    "python_sources_compile": "passed by test suite",
+    "native_cdt": {
+      "compiler": "15.2.0",
+      "CGAL": "6.1.1",
+      "adapter_count": 2,
+      "synthetic_fixtures_passed": 6,
+      "fixture_scope": "collinear boundaries, hole, duplicate and crossed-point rejection, donor island and prior crossing rejection",
+      "historical_geometry_or_CFD_rerun": false
+    },
+    "filename_first_full_history_secrets_scan": "passed before import commits; repeated before push",
+    "unexpected_new_media_or_geometry_assets": 0,
+    "private_identifiers": 0,
+    "selected_archive_source_and_evidence_files_checked": 97,
+    "selected_archive_files_unchanged": true,
+    "original_core_and_fixture_files_unchanged": true,
+    "source_archive_written": false
+  },
+  "review": {
+    "independent_extraction_review": "Surface, CAD and control groups cross-reviewed; two CAD extraction mismatches corrected before import",
+    "historical_failure_semantics": "Retained, including legacy cache mutation, missing constraints, reader-encoding mismatch and sampled-penalty defect"
+  },
+  "not_verified": [
+    "Original full experiments not replayed",
+    "Optional OCP and VTK geometry paths not executed",
+    "OpenVDB and larger native wrap/remesh tools not built or benchmarked",
+    "No physical accuracy, metric scale, closed vehicle or CFD production qualification"
+  ],
+  "publication": "Owner explicitly authorized keeping the existing repository public and pushing reviewed code; no visibility change.",
+  "original_fixture_sha256": {
+    "fixtures/open_shell.ply": "2cabb95f358ac8793f4a42d4ea109b865115b3901f89d6d276881656919bed3b",
+    "fixtures/rough_patch.ply": "9660584d67cb0f7c4981f7f4c31301e6671fdb3f9a293b75aa76410809926758"
+  }
+}

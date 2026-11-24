@@ -16,6 +16,20 @@ These are copies of working research scripts, with packaging and hygiene edits. 
 
 The original four helper extracts remain for comparison. `source_manifest.json` records source and copy hashes. `MIGRATION.md` lists the hygiene edits and the contracts that still need refactoring.
 
+## Later attempts, imported retrospectively
+
+[The chronological attempt index](attempts/README.md) records the 16 October to
+17 November work in separate prototype groups. Each row identifies the outcome
+and why the method was retained, held or dropped; each directory has code-level
+provenance and an input contract. The original source manifest above remains a
+historical record. New import manifests live beside their own code and do not
+rewrite its original hashes.
+
+The latest strip-removal test exposed an under-integrated sampled spline penalty.
+That failed implementation and its saved-coefficient energy audit are both
+present. A corrected production fit has not been run or promoted. No successful
+closure or parser test is presented as evidence of physical shape accuracy.
+
 ## Dependencies and execution
 
 `pip install -e '.[prototypes]'` adds SciPy and PyYAML. Individual recipes also require compatible optional CAD/visualization libraries (OpenCASCADE bindings, VTK/PyVista, Open3D, OpenCV, Matplotlib or mesh boolean/voxel support). These heavy optional runtimes are deliberately not part of the inspection CLI. The clean-environment gate tests the CLI and solver-independent parsers, and syntax-checks every Python copy; it does not certify the optional CAD or solver recipes.
